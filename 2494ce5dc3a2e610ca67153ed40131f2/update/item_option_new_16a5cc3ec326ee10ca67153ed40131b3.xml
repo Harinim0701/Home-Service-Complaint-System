@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new">
     <item_option_new action="INSERT_OR_UPDATE">
-        <active>false</active>
+        <active>true</active>
         <attributes/>
         <cat_item display_value="Home Services Complaint Form">48531a92c3e26e10ca67153ed40131e9</cat_item>
         <category/>
@@ -42,9 +42,9 @@
         <map_to_field>false</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
-        <name>formatter3</name>
+        <name>formatter10</name>
         <not_available_conversation>false</not_available_conversation>
-        <order>600</order>
+        <order>400</order>
         <post_insert_script/>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
@@ -77,20 +77,20 @@
         <summary_macro/>
         <sys_class_name>item_option_new</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-07-08 05:20:45</sys_created_on>
-        <sys_id>09c625e2c3a6ae10ca67153ed40131bb</sys_id>
-        <sys_mod_count>5</sys_mod_count>
-        <sys_name>formatter3</sys_name>
+        <sys_created_on>2025-07-08 16:54:58</sys_created_on>
+        <sys_id>16a5cc3ec326ee10ca67153ed40131b3</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>formatter10</sys_name>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
-        <sys_update_name>item_option_new_09c625e2c3a6ae10ca67153ed40131bb</sys_update_name>
+        <sys_update_name>item_option_new_16a5cc3ec326ee10ca67153ed40131b3</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-08 16:52:34</sys_updated_on>
+        <sys_updated_on>2025-07-08 16:57:10</sys_updated_on>
         <table/>
         <tooltip/>
         <topic_block/>
-        <type>20</type>
+        <type>24</type>
         <ui_page/>
         <unique>false</unique>
         <use_dynamic_default>false</use_dynamic_default>
@@ -106,22 +106,22 @@
         <visible_summary>true</visible_summary>
         <write_roles/>
     </item_option_new>
-    <sys_translated_text action="delete_multiple" query="documentkey=09c625e2c3a6ae10ca67153ed40131bb"/>
-    <fx_price action="delete_multiple" query="id=09c625e2c3a6ae10ca67153ed40131bb"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=16a5cc3ec326ee10ca67153ed40131b3"/>
+    <fx_price action="delete_multiple" query="id=16a5cc3ec326ee10ca67153ed40131b3"/>
     <fx_price action="INSERT_OR_UPDATE">
         <amount>0</amount>
         <currency display_value="USD">USD</currency>
         <field>price_if_checked</field>
-        <id>09c625e2c3a6ae10ca67153ed40131bb</id>
+        <id>16a5cc3ec326ee10ca67153ed40131b3</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-07-08 05:20:45</sys_created_on>
-        <sys_id>05c625e2c3a6ae10ca67153ed40131bd</sys_id>
+        <sys_created_on>2025-07-08 16:54:58</sys_created_on>
+        <sys_id>12a5cc3ec326ee10ca67153ed40131b5</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-08 05:20:45</sys_updated_on>
+        <sys_updated_on>2025-07-08 16:54:58</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>
@@ -129,16 +129,16 @@
         <amount>0</amount>
         <currency display_value="USD">USD</currency>
         <field>rec_price_if_checked</field>
-        <id>09c625e2c3a6ae10ca67153ed40131bb</id>
+        <id>16a5cc3ec326ee10ca67153ed40131b3</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-07-08 05:20:45</sys_created_on>
-        <sys_id>c9c625e2c3a6ae10ca67153ed40131bc</sys_id>
+        <sys_created_on>2025-07-08 16:54:58</sys_created_on>
+        <sys_id>d6a5cc3ec326ee10ca67153ed40131b4</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-08 05:20:45</sys_updated_on>
+        <sys_updated_on>2025-07-08 16:54:58</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>

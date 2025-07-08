@@ -8,46 +8,49 @@
         <applies_target_record>false</applies_target_record>
         <applies_to>item</applies_to>
         <cat_item display_value="Home Services Complaint Form">48531a92c3e26e10ca67153ed40131e9</cat_item>
-        <cat_variable>IO:39f24b1ac3e66e10ca67153ed4013168</cat_variable>
+        <cat_variable>IO:67138f1ac3e66e10ca67153ed4013140</cat_variable>
         <condition/>
         <description/>
         <field/>
         <global>true</global>
         <isolate_script>true</isolate_script>
         <messages/>
-        <name>Validate Mobile Number</name>
+        <name>Auto populate using pincode</name>
         <order/>
         <published_ref/>
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
   if (isLoading || !newValue) return;
  
-  var cleaned = newValue.trim();
- 
-  var fieldName = 'contact_number';
-  var phoneRegex = /^\d{10}$/;
- 
-  if (!phoneRegex.test(cleaned)) {
-    g_form.showFieldMsg(fieldName, 'Phone number must be exactly 10 digits.', 'error');
-  } else {
-    g_form.hideFieldMsg(fieldName, true);
-  }
+  var ga = new GlideAjax('x_1777185_home_s_0.PinCodeHelper');
+  ga.addParam('sysparm_name', 'getLocationByPin');
+  ga.addParam('sysparm_pincode', newValue);
+  ga.getXMLAnswer(function(response) {
+    var data = JSON.parse(response);
+    if (data && !data.error) {
+      g_form.setValue('city', data.city);
+      g_form.setValue('district', data.district);
+      g_form.setValue('state', data.state);
+    } else {
+      g_form.showFieldMsg('pin_code', 'Invalid or unrecognized PIN Code', 'error');
+    }
+  });
 }
  ]]></script>
         <sys_class_name>catalog_script_client</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-07-07 17:29:59</sys_created_on>
+        <sys_created_on>2025-07-08 10:23:08</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>13e3039ac3e66e10ca67153ed40131a9</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>Validate Mobile Number</sys_name>
+        <sys_id>32f726a6c32eae10ca67153ed40131e0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Auto populate using pincode</sys_name>
         <sys_overrides/>
         <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
-        <sys_update_name>catalog_script_client_13e3039ac3e66e10ca67153ed40131a9</sys_update_name>
+        <sys_update_name>catalog_script_client_32f726a6c32eae10ca67153ed40131e0</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-08 11:23:06</sys_updated_on>
+        <sys_updated_on>2025-07-08 10:23:08</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>10</ui_type>
