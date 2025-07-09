@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>supporting_documents</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Validate Supporting Documents</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+    if (isLoading || newValue == '') return;
+
+    var ga = new GlideAjax('x_1777185_home_s_0.Validate Attachments');
+    ga.addParam('sysparm_name', 'getFileName');
+    ga.addParam('sysparm_attachment_id', newValue);
+    ga.getXMLAnswer(function(fileName) {
+        fileName = fileName.toLowerCase();
+        if (!(fileName.endsWith('.pdf') || !fileName.endsWith('.png') || !fileName.endsWith('.jpeg'))) {
+            g_form.clearValue('attachment_file');
+            g_form.showFieldMsg('attachment_file', 'Only PDF, PNG, or JPEG files are allowed.', 'error');
+        }
+    });
+}
+
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-07 16:16:03</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f6123652c3a66e10ca67153ed401314c</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Validate Supporting Documents</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
+        <sys_update_name>sys_script_client_f6123652c3a66e10ca67153ed401314c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-08 12:58:42</sys_updated_on>
+        <table>x_1777185_home_s_0_complaint_details</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>pin_code</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Validate PIN Code</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+    if (isLoading || newValue === '') {
+        return;
+    }
+
+    if (newValue.length != 6) {
+        g_form.addErrorMessage('PIN code must be exactly 6 digits.');
+        g_form.setValue('pin_code', '');  
+        return;
+    }
+}  
+
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-07 15:49:48</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0fe86a92c3666e10ca67153ed401316c</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Validate PIN Code</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
+        <sys_update_name>sys_script_client_0fe86a92c3666e10ca67153ed401316c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-08 09:50:50</sys_updated_on>
+        <table>x_1777185_home_s_0_customer_details</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</application>
+        <file_path/>
+        <instance_id>a3b5f8603b7c2e14baf6048aa4e45a23</instance_id>
+        <instance_name>dev317882</instance_name>
+        <name>sys_script_client_0fe86a92c3666e10ca67153ed401316c</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field&gt;pin_code&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Validate PIN Code&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+    if (isLoading || newValue === '') {
+        return;
+    }
+
+    if (newValue.length != 6) {
+        g_form.addErrorMessage('PIN code must be exactly 6 digits.');
+        g_form.setValue('pin_code', '');  
+        return;
+    }
+}  
+
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-07-07 15:49:48&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;0fe86a92c3666e10ca67153ed401316c&lt;/sys_id&gt;&lt;sys_mod_count&gt;8&lt;/sys_mod_count&gt;&lt;sys_name&gt;Validate PIN Code&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0"&gt;2494ce5dc3a2e610ca67153ed40131f2&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Home Services Complaint System"&gt;2494ce5dc3a2e610ca67153ed40131f2&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_0fe86a92c3666e10ca67153ed401316c&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-07-08 09:50:50&lt;/sys_updated_on&gt;&lt;table&gt;x_1777185_home_s_0_customer_details&lt;/table&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>590355214</payload_hash>
+        <record_name>Validate PIN Code</record_name>
+        <reverted_from/>
+        <source>2094ce5dc3a2e610ca67153ed40131f7</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-08 09:50:50</sys_created_on>
+        <sys_id>15946222c32eae10ca67153ed401315b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>197e971fa0b0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-08 09:50:50</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>d9946222542eae10167862fe2f345e5a</update_guid>
+        <update_guid_history>d9946222542eae10167862fe2f345e5a:590355214,ac00f29efe666e107498272bf5aa049c:1656957243,29cf6e5e0b666e100210a3c3ce27f9b0:1188462155,b7feaa1e16666e10977a71e52f1384fa:1814148592,265e6ada98666e1057598dc2623e0f40:1878817989,f3ed6e5aff666e109ae880531b589dc4:581846174,0f9d6e921b666e1016772a5638116cff:2057457063,127de616d0666e108567c3ca882bf4ad:-2076874888,3d2d2e5a1e666e10bfc6094739a6d36e:-341662209</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-08 10:02:56</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>29fb1d40fd084a9088abae7203e68c19</sys_id>
+        <sys_metadata>0fe86a92c3666e10ca67153ed401316c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Validate PIN Code</sys_name>
+        <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
+        <sys_parent display_value="Customer Details">a3a1251ec3ae2e10ca67153ed4013187</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
+        <sys_scope_delete display_value="">08c79c63f4f541ba80adc6feb813efc1</sys_scope_delete>
+        <sys_update_name>sys_script_client_0fe86a92c3666e10ca67153ed401316c</sys_update_name>
+        <sys_update_version display_value="sys_script_client_0fe86a92c3666e10ca67153ed401316c">15946222c32eae10ca67153ed401315b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-08 10:02:56</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

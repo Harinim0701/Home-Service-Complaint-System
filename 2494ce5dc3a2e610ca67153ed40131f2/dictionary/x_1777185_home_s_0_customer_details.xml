@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="a3a1251ec3ae2e10ca67153ed4013187" label="Customer Details" max_length="40" name="x_1777185_home_s_0_customer_details" type="collection">
+        <element label="Street Line 1" max_length="50" name="street_line_1" type="string"/>
+        <element label="Pin code" max_length="6" name="pin_code" type="string"/>
+        <element label="City" max_length="50" name="city" type="string"/>
+        <element display="true" label="Customer Name" max_length="255" name="customer_name" type="string"/>
+        <element label="Email" max_length="40" name="email" type="email"/>
+        <element label="Street Line 2" max_length="50" name="street_line_2" type="string"/>
+        <element label="Mobile Number" max_length="10" name="mobile_number" type="string"/>
+        <element label="State" max_length="50" name="state" type="string"/>
+        <element label="Street Line 3" max_length="50" name="street_line_3" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="District" max_length="50" name="district" type="string"/>
+    </element>
+</database>

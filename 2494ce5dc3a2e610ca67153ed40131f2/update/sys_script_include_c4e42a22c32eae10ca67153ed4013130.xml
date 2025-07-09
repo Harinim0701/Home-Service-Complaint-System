@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1777185_home_s_0.PinCodeHelper</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>PinCodeHelper</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var PinCodeHelper = Class.create();
+PinCodeHelper.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+  getLocationByPin: function() {
+    var pincode = this.getParameter('sysparm_pincode');
+    var response = new sn_ws.RESTMessageV2(); // REST call to postal API
+    response.setHttpMethod('GET');
+    response.setEndpoint('https://api.postalpincode.in/pincode/' + pincode);
+    var resp = response.execute();
+    var body = resp.getBody();
+   
+    var json = JSON.parse(body);
+    var result = {};
+    if (json[0].Status === 'Success') {
+      var postOffice = json[0].PostOffice[0];
+      result.city = postOffice.Division;
+      result.district = postOffice.District;
+      result.state = postOffice.State;
+    } else {
+      result.error = true;
+    }
+    return JSON.stringify(result);
+  }
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-08 09:53:03</sys_created_on>
+        <sys_id>c4e42a22c32eae10ca67153ed4013130</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PinCodeHelper</sys_name>
+        <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
+        <sys_update_name>sys_script_include_c4e42a22c32eae10ca67153ed4013130</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-08 09:53:03</sys_updated_on>
+    </sys_script_include>
+</record_update>

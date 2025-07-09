@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>customer_name</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Auto populate customer details</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+    if (isLoading || newValue == '') return;
+
+    var ga = new GlideAjax('x_1777185_home_s_0.GetCustomerDetails');
+    ga.addParam('sysparm_name', 'getDetails');
+    ga.addParam('sysparm_customer_id', newValue);
+    ga.getXML(getrDetails);
+
+    function getrDetails(response) {
+        var data = response.responseXML.documentElement.getAttribute("answer");
+        var ans = JSON.parse(data);
+        if (ans) {
+            g_form.setValue('email', ans.email);
+            g_form.setValue('contact_number', ans.contact_number);
+            g_form.setValue('street_line_1', ans.street_line_1);
+            g_form.setValue('street_line_2', ans.street_line_2);
+            g_form.setValue('street_line_3', ans.street_line_3);
+            g_form.setValue('district', ans.district);
+            g_form.setValue('city', ans.city);
+            g_form.setValue('state_or_province', ans.state);
+            g_form.setValue('pin_code', ans.pin_code);
+        }
+    }
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-06 13:58:27</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6e5905cac366ea10ca67153ed40131b2</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>Auto populate customer details</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
+        <sys_update_name>sys_script_client_6e5905cac366ea10ca67153ed40131b2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-08 16:43:32</sys_updated_on>
+        <table>x_1777185_home_s_0_complaint_details</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

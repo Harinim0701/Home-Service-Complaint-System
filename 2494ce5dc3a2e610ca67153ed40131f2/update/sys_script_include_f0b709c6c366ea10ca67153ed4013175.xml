@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_1777185_home_s_0.GetCustomerDetails</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>GetCustomerDetails</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var GetCustomerDetails = Class.create();
+GetCustomerDetails.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    getDetails: function() {
+        var customerId = this.getParameter('sysparm_customer_id');
+        var result = {};
+        if (!customerId) return JSON.stringify(result);
+
+        var gr = new GlideRecord('x_1777185_home_s_0_customer_details'); 
+        gr.addQuery('sys_id', customerId);	
+        gr.orderByDesc('sys_created_on');
+        gr.query();
+
+        if (gr.next()) {
+            result.email = gr.email+'';
+            result.contact_number = gr.mobile_number+'';
+			result.street_line_1 = gr.street_line_1+'';
+			result.street_line_2 = gr.street_line_2+'';
+			result.street_line_3 = gr.street_line_3+'';
+			result.city = gr.city+'';
+			result.district = gr.district+'';
+			result.state = gr.state+'';
+			result.pin_code = gr.pin_code+'';	
+        }
+
+        return JSON.stringify(result);
+    },
+	type:'GetCustomerDetails'
+});
+
+
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-06 13:54:43</sys_created_on>
+        <sys_id>f0b709c6c366ea10ca67153ed4013175</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_name>GetCustomerDetails</sys_name>
+        <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
+        <sys_update_name>sys_script_include_f0b709c6c366ea10ca67153ed4013175</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-08 16:44:47</sys_updated_on>
+    </sys_script_include>
+</record_update>
