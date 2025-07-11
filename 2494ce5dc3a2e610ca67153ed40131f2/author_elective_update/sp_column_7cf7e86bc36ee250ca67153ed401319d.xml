@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column">
+    <sp_column action="DELETE">
+        <class_name/>
+        <order>1</order>
+        <semantic_tag/>
+        <size>6</size>
+        <size_lg/>
+        <size_sm/>
+        <size_xs/>
+        <sp_row display_value="1">70f7e86bc36ee250ca67153ed401319b</sp_row>
+        <sys_class_name>sp_column</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-11 03:20:13</sys_created_on>
+        <sys_id>7cf7e86bc36ee250ca67153ed401319d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
+        <sys_update_name>sp_column_7cf7e86bc36ee250ca67153ed401319d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-11 03:20:13</sys_updated_on>
+    </sp_column>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</application>
+        <file_path/>
+        <instance_id>a3b5f8603b7c2e14baf6048aa4e45a23</instance_id>
+        <instance_name>dev317882</instance_name>
+        <name>sp_column_7cf7e86bc36ee250ca67153ed401319d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column"><sp_column action="INSERT_OR_UPDATE"><class_name/><order>1</order><semantic_tag/><size>6</size><size_lg/><size_sm/><size_xs/><sp_row display_value="1">70f7e86bc36ee250ca67153ed401319b</sp_row><sys_class_name>sp_column</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-07-11 03:20:13</sys_created_on><sys_id>7cf7e86bc36ee250ca67153ed401319d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>1</sys_name><sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package><sys_policy/><sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope><sys_update_name>sp_column_7cf7e86bc36ee250ca67153ed401319d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-07-11 03:20:13</sys_updated_on></sp_column></record_update>]]></payload>
+        <payload_hash>-26696779</payload_hash>
+        <record_name>1</record_name>
+        <reverted_from/>
+        <source>7d9a10c7c36e2250ca67153ed401315d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-11 03:20:13</sys_created_on>
+        <sys_id>b0f7e86bc36ee250ca67153ed40131a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>197f77f716b0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-11 03:20:13</sys_updated_on>
+        <type>Column</type>
+        <update_guid>74f7e86b566ee250b428d6d66038899f</update_guid>
+        <update_guid_history>74f7e86b566ee250b428d6d66038899f:-26696779</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="1">12a54d27c3222650ca67153ed401314b</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-11 05:30:02</sys_created_on>
+        <sys_db_object display_value="" name="sp_column">sp_column</sys_db_object>
+        <sys_id>775f996c6876447c82566c1761c86984</sys_id>
+        <sys_metadata>7cf7e86bc36ee250ca67153ed401319d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
+        <sys_scope_delete display_value="">08c79c63f4f541ba80adc6feb813efc1</sys_scope_delete>
+        <sys_update_name>sp_column_7cf7e86bc36ee250ca67153ed401319d</sys_update_name>
+        <sys_update_version display_value="sp_column_7cf7e86bc36ee250ca67153ed401319d">b0f7e86bc36ee250ca67153ed40131a0</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-11 05:30:02</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

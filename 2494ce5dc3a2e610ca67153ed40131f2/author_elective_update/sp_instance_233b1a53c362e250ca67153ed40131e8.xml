@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>success</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">d19ee8e3c3aee250ca67153ed40131fe</sp_column>
+        <sp_widget display_value="link-button">abc50de6d702120023c84f80de61036a</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-10 17:05:28</sys_created_on>
+        <sys_id>233b1a53c362e250ca67153ed40131e8</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
+        <sys_update_name>sp_instance_233b1a53c362e250ca67153ed40131e8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-11 05:14:20</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"href": {
+		"value": "https://dev317882.service-now.com/sp?id=sc_cat_item&sys_id=48531a92c3e26e10ca67153ed40131e9&sysparm_category=e15706fc0a0a0aa7007fc21e1ab70c2f",
+		"displayValue": "https://dev317882.service-now.com/sp?id=sc_cat_item&sys_id=48531a92c3e26e10ca67153ed40131e9&sysparm_category=e15706fc0a0a0aa7007fc21e1ab70c2f"
+	},
+	"button_text": {
+		"value": "Raise a Complaint",
+		"displayValue": "Raise a Complaint"
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="DELETE" query="documentkey=233b1a53c362e250ca67153ed40131e8"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</application>
+        <file_path/>
+        <instance_id>a3b5f8603b7c2e14baf6048aa4e45a23</instance_id>
+        <instance_name>dev317882</instance_name>
+        <name>sp_instance_233b1a53c362e250ca67153ed40131e8</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance"&gt;&lt;sp_instance action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;success&lt;/color&gt;&lt;css/&gt;&lt;glyph/&gt;&lt;id/&gt;&lt;order&gt;1&lt;/order&gt;&lt;roles/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="1"&gt;d19ee8e3c3aee250ca67153ed40131fe&lt;/sp_column&gt;&lt;sp_widget display_value="link-button"&gt;abc50de6d702120023c84f80de61036a&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-07-10 17:05:28&lt;/sys_created_on&gt;&lt;sys_id&gt;233b1a53c362e250ca67153ed40131e8&lt;/sys_id&gt;&lt;sys_mod_count&gt;15&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0"&gt;2494ce5dc3a2e610ca67153ed40131f2&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Home Services Complaint System"&gt;2494ce5dc3a2e610ca67153ed40131f2&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_233b1a53c362e250ca67153ed40131e8&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-07-11 05:14:20&lt;/sys_updated_on&gt;&lt;title/&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"href": {
+		"value": "https://dev317882.service-now.com/sp?id=sc_cat_item&amp;sys_id=48531a92c3e26e10ca67153ed40131e9&amp;sysparm_category=e15706fc0a0a0aa7007fc21e1ab70c2f",
+		"displayValue": "https://dev317882.service-now.com/sp?id=sc_cat_item&amp;sys_id=48531a92c3e26e10ca67153ed40131e9&amp;sysparm_category=e15706fc0a0a0aa7007fc21e1ab70c2f"
+	},
+	"button_text": {
+		"value": "Raise a Complaint",
+		"displayValue": "Raise a Complaint"
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=233b1a53c362e250ca67153ed40131e8"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>247128603</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>7d9a10c7c36e2250ca67153ed401315d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-11 05:14:20</sys_created_on>
+        <sys_id>d012c163c3222650ca67153ed40131c2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>197f7e7eb950000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-11 05:14:20</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>5812c1635d22265006b5618db2e45ec1</update_guid>
+        <update_guid_history>5812c1635d22265006b5618db2e45ec1:247128603,280281630f222650745d7268a5461b20:1979238010,c4a10923172226505677162ef1b8fd3c:247128603,c05b30e7ceeee2509b85d1c5dda1bc3d:1979238010,fe48f8a339eee250f5d5181284732466:247128603,ef91306b69aee25033c41a5061342156:1979238010,0891bc2b72aee250a0acafa9d9fb82d0:247128603,3481f867feaee25062bdd926b994b29c:-1813405016,1c71302b76aee250f73a63ec1a6adaf9:-2039765885,d590f0e732aee2506b4b69695269fe8e:1456372326,7cae202781aee250ab01419c50699ba4:-1631788826,cf9eece319aee250bcdfdd85fda6b1e1:100320581,71f7a0ab976ee25063888fe7eb337a4f:-1631788826,cd5dde53b062e250b4f8f43f242b3a5e:-389549148,bc4b9e531262e2500ef88a345adcb3e7:394961186,673b1a53db62e2508c02bd8d7c311ee9:-1811671931</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">05224563c3222650ca67153ed40131a8</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-11 05:14:39</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>69760b2fc34e4058964faa4f5af10d29</sys_id>
+        <sys_metadata>233b1a53c362e250ca67153ed40131e8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
+        <sys_scope_delete display_value="">08c79c63f4f541ba80adc6feb813efc1</sys_scope_delete>
+        <sys_update_name>sp_instance_233b1a53c362e250ca67153ed40131e8</sys_update_name>
+        <sys_update_version display_value="sp_instance_233b1a53c362e250ca67153ed40131e8">d012c163c3222650ca67153ed40131c2</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-11 05:14:39</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -4,111 +4,97 @@
             <element>number</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-07-09 06:25:35</sys_created_on>
-            <sys_id>d83f7a3ac3662250ca67153ed401319f</sys_id>
+            <sys_created_on>2025-07-09 17:25:59</sys_created_on>
+            <sys_id>9a565587c3e26250ca67153ed40131c5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Customer Details" display_value="Customer Details" name="x_1777185_home_s_0_complaint_details" sys_domain="global" view="Default view">9fa607d1c32ae610ca67153ed401312c</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-07-09 06:25:35</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>current_status</element>
-            <position>1</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-07-09 06:25:35</sys_created_on>
-            <sys_id>183f7a3ac3662250ca67153ed40131a0</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="Customer Details" display_value="Customer Details" name="x_1777185_home_s_0_complaint_details" sys_domain="global" view="Default view">9fa607d1c32ae610ca67153ed401312c</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-07-09 06:25:35</sys_updated_on>
+            <sys_updated_on>2025-07-09 17:25:59</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>customer_name</element>
-            <position>2</position>
+            <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-07-09 06:25:35</sys_created_on>
-            <sys_id>103f7a3ac3662250ca67153ed40131a1</sys_id>
+            <sys_created_on>2025-07-09 17:25:59</sys_created_on>
+            <sys_id>56565587c3e26250ca67153ed40131df</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Customer Details" display_value="Customer Details" name="x_1777185_home_s_0_complaint_details" sys_domain="global" view="Default view">9fa607d1c32ae610ca67153ed401312c</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-07-09 06:25:35</sys_updated_on>
+            <sys_updated_on>2025-07-09 17:25:59</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>email</element>
-            <position>3</position>
+            <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-07-09 06:25:35</sys_created_on>
-            <sys_id>183f7a3ac3662250ca67153ed40131a1</sys_id>
+            <sys_created_on>2025-07-09 17:25:59</sys_created_on>
+            <sys_id>5e565587c3e26250ca67153ed40131df</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Customer Details" display_value="Customer Details" name="x_1777185_home_s_0_complaint_details" sys_domain="global" view="Default view">9fa607d1c32ae610ca67153ed401312c</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-07-09 06:25:35</sys_updated_on>
+            <sys_updated_on>2025-07-09 17:25:59</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.begin_split</element>
-            <position>4</position>
+            <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-07-09 06:25:35</sys_created_on>
-            <sys_id>103f7a3ac3662250ca67153ed40131a2</sys_id>
+            <sys_created_on>2025-07-09 17:25:59</sys_created_on>
+            <sys_id>56565587c3e26250ca67153ed40131e0</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Customer Details" display_value="Customer Details" name="x_1777185_home_s_0_complaint_details" sys_domain="global" view="Default view">9fa607d1c32ae610ca67153ed401312c</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-07-09 06:25:35</sys_updated_on>
+            <sys_updated_on>2025-07-09 17:25:59</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>customer_age</element>
-            <position>5</position>
+            <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-07-09 06:25:35</sys_created_on>
-            <sys_id>183f7a3ac3662250ca67153ed40131a2</sys_id>
+            <sys_created_on>2025-07-09 17:25:59</sys_created_on>
+            <sys_id>5e565587c3e26250ca67153ed40131e0</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Customer Details" display_value="Customer Details" name="x_1777185_home_s_0_complaint_details" sys_domain="global" view="Default view">9fa607d1c32ae610ca67153ed401312c</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-07-09 06:25:35</sys_updated_on>
+            <sys_updated_on>2025-07-09 17:25:59</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>6</position>
+            <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-07-09 06:25:35</sys_created_on>
-            <sys_id>103f7a3ac3662250ca67153ed40131a3</sys_id>
+            <sys_created_on>2025-07-09 17:25:59</sys_created_on>
+            <sys_id>56565587c3e26250ca67153ed40131e1</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Customer Details" display_value="Customer Details" name="x_1777185_home_s_0_complaint_details" sys_domain="global" view="Default view">9fa607d1c32ae610ca67153ed401312c</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-07-09 06:25:35</sys_updated_on>
+            <sys_updated_on>2025-07-09 17:25:59</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>contact_number</element>
-            <position>7</position>
+            <position>6</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-07-09 06:25:35</sys_created_on>
-            <sys_id>dc3f7a3ac3662250ca67153ed40131af</sys_id>
+            <sys_created_on>2025-07-09 17:25:59</sys_created_on>
+            <sys_id>5e565587c3e26250ca67153ed40131e1</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Customer Details" display_value="Customer Details" name="x_1777185_home_s_0_complaint_details" sys_domain="global" view="Default view">9fa607d1c32ae610ca67153ed401312c</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-07-09 06:25:35</sys_updated_on>
+            <sys_updated_on>2025-07-09 17:25:59</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

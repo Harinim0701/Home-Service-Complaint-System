@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="INSERT_OR_UPDATE">
+        <background_color/>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name>visible-xs</class_name>
+        <container_class_name/>
+        <name>Home service home page - Container 3</name>
+        <order>3</order>
+        <semantic_tag/>
+        <sp_page display_value="home_service_home_page">9f6ec25fc3eea250ca67153ed401318c</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-10 16:09:28</sys_created_on>
+        <sys_id>5b6e0e9fc3eea250ca67153ed4013143</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Home service home page - Container 3</sys_name>
+        <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
+        <sys_update_name>sp_container_5b6e0e9fc3eea250ca67153ed4013143</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-11 05:14:58</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+</record_update>

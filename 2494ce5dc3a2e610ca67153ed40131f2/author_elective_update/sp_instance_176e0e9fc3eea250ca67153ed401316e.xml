@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">1b6e0e9fc3eea250ca67153ed4013166</sp_column>
+        <sp_widget display_value="KB Top Rated">3c817b52cb30020000f8d856634c9cfb</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-10 16:09:29</sys_created_on>
+        <sys_id>176e0e9fc3eea250ca67153ed401316e</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Top Rated Articles</sys_name>
+        <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
+        <sys_update_name>sp_instance_176e0e9fc3eea250ca67153ed401316e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-10 17:02:50</sys_updated_on>
+        <title>Top Rated Articles</title>
+        <url/>
+        <widget_parameters/>
+    </sp_instance>
+    <sys_translated_text action="DELETE" query="documentkey=176e0e9fc3eea250ca67153ed401316e"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</application>
+        <file_path/>
+        <instance_id>a3b5f8603b7c2e14baf6048aa4e45a23</instance_id>
+        <instance_name>dev317882</instance_name>
+        <name>sp_instance_176e0e9fc3eea250ca67153ed401316e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance"><sp_instance action="INSERT_OR_UPDATE"><active>true</active><class_name/><color>default</color><css/><glyph/><id/><order>1</order><roles/><short_description/><size>md</size><sp_column display_value="1">1b6e0e9fc3eea250ca67153ed4013166</sp_column><sp_widget display_value="KB Top Rated">3c817b52cb30020000f8d856634c9cfb</sp_widget><sys_class_name>sp_instance</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-07-10 16:09:29</sys_created_on><sys_id>176e0e9fc3eea250ca67153ed401316e</sys_id><sys_mod_count>3</sys_mod_count><sys_name>Top Rated Articles</sys_name><sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package><sys_policy/><sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope><sys_update_name>sp_instance_176e0e9fc3eea250ca67153ed401316e</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-07-10 17:02:50</sys_updated_on><title>Top Rated Articles</title><url/><widget_parameters/></sp_instance><sys_translated_text action="delete_multiple" query="documentkey=176e0e9fc3eea250ca67153ed401316e"/></record_update>]]></payload>
+        <payload_hash>498900182</payload_hash>
+        <record_name>Top Rated Articles</record_name>
+        <reverted_from/>
+        <source>7d9a10c7c36e2250ca67153ed401315d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-10 17:02:50</sys_created_on>
+        <sys_id>3caa9e13c362e250ca67153ed40131b1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>197f54a33df0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-10 17:02:50</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>b0aa9e13b962e250b08bdd99d2fc46b1</update_guid>
+        <update_guid_history>b0aa9e13b962e250b08bdd99d2fc46b1:498900182,dc9a1e13b662e250056fa731725277b7:269612725,377a9a133662e2500ba85023d5e7244a:40325268,5b6e0e9f99eea2501fe8c49234ad246f:269612725</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Top Rated Articles">59aa969bc322e250ca67153ed401311d</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-10 17:02:51</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>1f743752dfee4ba88a5b4273eb8b5e10</sys_id>
+        <sys_metadata>176e0e9fc3eea250ca67153ed401316e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Top Rated Articles</sys_name>
+        <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
+        <sys_scope_delete display_value="">08c79c63f4f541ba80adc6feb813efc1</sys_scope_delete>
+        <sys_update_name>sp_instance_176e0e9fc3eea250ca67153ed401316e</sys_update_name>
+        <sys_update_version display_value="sp_instance_176e0e9fc3eea250ca67153ed401316e">3caa9e13c362e250ca67153ed40131b1</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-10 17:02:51</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -12,7 +12,7 @@
         <order/>
         <script><![CDATA[function onLoad() {
     var editableFlag = g_form.getValue('editable_flag');
-    if (editableFlag === 'false') {
+    if (editableFlag == 'false') {
         var fields = g_form.getEditableFields();
         for (var i = 0; i < fields.length; i++) {
             g_form.setReadOnly(fields[i], true);
@@ -30,7 +30,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>1cdb3ccfc3226250ca67153ed401316a</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>if editable flag is false then make ent</sys_name>
         <sys_overrides/>
         <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
@@ -38,7 +38,7 @@
         <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
         <sys_update_name>sys_script_client_1cdb3ccfc3226250ca67153ed401316a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-09 15:54:16</sys_updated_on>
+        <sys_updated_on>2025-07-09 17:37:47</sys_updated_on>
         <table>x_1777185_home_s_0_complaint_details</table>
         <type>onLoad</type>
         <ui_type>10</ui_type>

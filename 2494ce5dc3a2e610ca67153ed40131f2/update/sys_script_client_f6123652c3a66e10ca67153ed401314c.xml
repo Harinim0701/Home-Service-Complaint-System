@@ -18,7 +18,7 @@
     ga.addParam('sysparm_attachment_id', newValue);
     ga.getXMLAnswer(function(fileName) {
         fileName = fileName.toLowerCase();
-        if (!(fileName.endsWith('.pdf') || !fileName.endsWith('.png') || !fileName.endsWith('.jpeg'))) {
+        if (!(fileName.endsWith('.pdf') || fileName.endsWith('.png') || fileName.endsWith('.jpeg'))) {
             g_form.clearValue('attachment_file');
             g_form.showFieldMsg('attachment_file', 'Only PDF, PNG, or JPEG files are allowed.', 'error');
         }
@@ -32,7 +32,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f6123652c3a66e10ca67153ed401314c</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Validate Supporting Documents</sys_name>
         <sys_overrides/>
         <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
@@ -40,7 +40,7 @@
         <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
         <sys_update_name>sys_script_client_f6123652c3a66e10ca67153ed401314c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-08 12:58:42</sys_updated_on>
+        <sys_updated_on>2025-07-10 09:03:53</sys_updated_on>
         <table>x_1777185_home_s_0_complaint_details</table>
         <type>onChange</type>
         <ui_type>10</ui_type>

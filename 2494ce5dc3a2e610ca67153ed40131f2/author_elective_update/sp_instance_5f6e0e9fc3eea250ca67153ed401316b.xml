@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph>tasks</glyph>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">1b6e0e9fc3eea250ca67153ed4013166</sp_column>
+        <sp_widget display_value="KB News">ad2326a45b110200e23dc7ad31f91a1e</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-10 16:09:29</sys_created_on>
+        <sys_id>5f6e0e9fc3eea250ca67153ed401316b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>News</sys_name>
+        <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
+        <sys_update_name>sp_instance_5f6e0e9fc3eea250ca67153ed401316b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-10 17:02:31</sys_updated_on>
+        <title>News</title>
+        <url/>
+        <widget_parameters/>
+    </sp_instance>
+    <sys_translated_text action="DELETE" query="documentkey=5f6e0e9fc3eea250ca67153ed401316b"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</application>
+        <file_path/>
+        <instance_id>a3b5f8603b7c2e14baf6048aa4e45a23</instance_id>
+        <instance_name>dev317882</instance_name>
+        <name>sp_instance_5f6e0e9fc3eea250ca67153ed401316b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance"><sp_instance action="INSERT_OR_UPDATE"><active>true</active><class_name/><color>default</color><css/><glyph>tasks</glyph><id/><order>1</order><roles/><short_description/><size>md</size><sp_column display_value="1">1b6e0e9fc3eea250ca67153ed4013166</sp_column><sp_widget display_value="KB News">ad2326a45b110200e23dc7ad31f91a1e</sp_widget><sys_class_name>sp_instance</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-07-10 16:09:29</sys_created_on><sys_id>5f6e0e9fc3eea250ca67153ed401316b</sys_id><sys_mod_count>2</sys_mod_count><sys_name>News</sys_name><sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package><sys_policy/><sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope><sys_update_name>sp_instance_5f6e0e9fc3eea250ca67153ed401316b</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-07-10 17:02:31</sys_updated_on><title>News</title><url/><widget_parameters/></sp_instance><sys_translated_text action="delete_multiple" query="documentkey=5f6e0e9fc3eea250ca67153ed401316b"/></record_update>]]></payload>
+        <payload_hash>-1042426404</payload_hash>
+        <record_name>News</record_name>
+        <reverted_from/>
+        <source>7d9a10c7c36e2250ca67153ed401315d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-10 17:02:31</sys_created_on>
+        <sys_id>149a1e13c362e250ca67153ed40131b5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>197f549ea540000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-10 17:02:31</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>989a1e132462e25041956cd6b6db4ab4</update_guid>
+        <update_guid_history>989a1e132462e25041956cd6b6db4ab4:-1042426404,ff7a9a13f862e250e86807a17189e946:-1776842723,936e0e9f64eea2500725e741f9de976d:-1042426404</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="News">38aa929fc322e250ca67153ed40131a6</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-10 17:02:49</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>5aa5abaaddc4440096608683edf47529</sys_id>
+        <sys_metadata>5f6e0e9fc3eea250ca67153ed401316b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>News</sys_name>
+        <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
+        <sys_scope_delete display_value="">08c79c63f4f541ba80adc6feb813efc1</sys_scope_delete>
+        <sys_update_name>sp_instance_5f6e0e9fc3eea250ca67153ed401316b</sys_update_name>
+        <sys_update_version display_value="sp_instance_5f6e0e9fc3eea250ca67153ed401316b">149a1e13c362e250ca67153ed40131b5</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-10 17:02:49</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

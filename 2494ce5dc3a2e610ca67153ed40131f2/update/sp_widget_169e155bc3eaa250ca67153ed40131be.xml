@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.heading-widget {
+  text-align: center;
+  padding: 40px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #00f5a0, #00d9ff); /* Fluorescent teal to blue */
+  border-radius: 25px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
+  transform: translateY(0);
+  transition: all 0.4s ease-in-out;
+  border: 2px solid #00ffe0;
+  animation: pulseGlow 3s infinite;
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+  }
+}
+
+.heading-widget:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 50px rgba(0, 255, 255, 1);
+}
+
+.heading-widget h1 {
+  margin-bottom: 20px;
+  font-size: 3em;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #00ffe0, 2px 2px 4px rgba(0, 0, 0, 0.6);
+  font-weight: bold;
+}
+
+.heading-widget p {
+  font-size: 1.5em;
+  color: #e0ffe0;
+  margin-bottom: 0;
+  text-shadow: 0 0 5px #00ffe0;
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>Copy of Heading Widget</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	data.userName=gs.getUserDisplayName();
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-10 12:40:31</sys_created_on>
+        <sys_id>169e155bc3eaa250ca67153ed40131be</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Copy of Heading Widget</sys_name>
+        <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
+        <sys_update_name>sp_widget_169e155bc3eaa250ca67153ed40131be</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-11 04:51:25</sys_updated_on>
+        <template><![CDATA[<div class="heading-widget">
+  <h1>{{options.title || "Home Services Complaint Portal"}}</h1>
+  <p>{{options.description || "Submit and track complaints related to home services. Stay informed with real-time updates and resolution status."}}</p>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>
