@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="b2a6c3d1c32ae610ca67153ed401316a" extends="task" label="Complaint Details" max_length="40" name="x_1777185_home_s_0_complaint_details" text_index="true" type="collection">
-        <element default="true" label="Editable Flag" max_length="40" name="editable_flag" type="boolean"/>
+        <element label="Editable Flag" max_length="40" name="editable_flag" type="boolean"/>
         <element label="Pin Code" max_length="40" name="pin_code" type="integer"/>
         <element label="Notes" max_length="4000" name="notes" type="string"/>
         <element label="Contact Number" mandatory="true" max_length="40" name="contact_number" type="integer"/>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>editable_flag</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>if editable flag is false then make ent</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+    var editableFlag = g_form.getValue('editable_flag');
+    alert(editableFlag);
+    if (editableFlag == 'false') {
+        var fields = g_form.getEditableFields();
+        for (var i = 0; i < fields.length; i++) {
+            g_form.setDisabled(fields[i], true);
+        }
+    } else {
+        var fields = g_form.getEditableFields();
+        for (var i = 0; i < fields.length; i++) {
+            g_form.setDisabled(fields[i], false);
+        }
+    }
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-09 15:31:43</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1cdb3ccfc3226250ca67153ed401316a</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>if editable flag is false then make ent</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
+        <sys_update_name>sys_script_client_1cdb3ccfc3226250ca67153ed401316a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-11 16:17:47</sys_updated_on>
+        <table>x_1777185_home_s_0_complaint_details</table>
+        <type>onLoad</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</application>
+        <file_path/>
+        <instance_id>a3b5f8603b7c2e14baf6048aa4e45a23</instance_id>
+        <instance_name>dev317882</instance_name>
+        <name>sys_script_client_1cdb3ccfc3226250ca67153ed401316a</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field&gt;editable_flag&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;if editable flag is false then make ent&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onLoad() {
+    var editableFlag = g_form.getValue('editable_flag');
+    alert(editableFlag);
+    if (editableFlag == 'false') {
+        var fields = g_form.getEditableFields();
+        for (var i = 0; i &lt; fields.length; i++) {
+            g_form.setDisabled(fields[i], true);
+        }
+    } else {
+        var fields = g_form.getEditableFields();
+        for (var i = 0; i &lt; fields.length; i++) {
+            g_form.setDisabled(fields[i], false);
+        }
+    }
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-07-09 15:31:43&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;1cdb3ccfc3226250ca67153ed401316a&lt;/sys_id&gt;&lt;sys_mod_count&gt;18&lt;/sys_mod_count&gt;&lt;sys_name&gt;if editable flag is false then make ent&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0"&gt;2494ce5dc3a2e610ca67153ed40131f2&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Home Services Complaint System"&gt;2494ce5dc3a2e610ca67153ed40131f2&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_1cdb3ccfc3226250ca67153ed401316a&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-07-11 16:17:47&lt;/sys_updated_on&gt;&lt;table&gt;x_1777185_home_s_0_complaint_details&lt;/table&gt;&lt;type&gt;onLoad&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1504434461</payload_hash>
+        <record_name>if editable flag is false then make ent</record_name>
+        <reverted_from/>
+        <source>7d9a10c7c36e2250ca67153ed401315d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-11 16:17:47</sys_created_on>
+        <sys_id>f6e917efc36e2650ca67153ed4013121</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>197fa4753450000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-11 16:17:47</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>7ee917ef726e26500be77411f66a3920</update_guid>
+        <update_guid_history>7ee917ef726e26500be77411f66a3920:1504434461,54a7d7ebac6e2650e326bb00d0d9df8e:282962896,02475f2b786e2650215ad1f59fc6021c:365149028,31c55f2bbf6e26501eb901b04bcd2413:282962896,fba597e7e56e2650a78f7cb99929f2d6:1468205923,37651be7556e265006822c8276bef359:-470953381,78d413e7b96e2650134712fdbbb85755:-1831371152,7ba417a7226e2650a0b5563c086ea8d7:-1265234372,16249b27126e26500f50f8de9a37868c:956609750,b183dfe7642e2650b0e995feaf0c1f6d:1332455528,02fd1a2b6d2a2650d4782ee8463e99a1:-859751481,ec4d5227ce2a2650930c9b0afe02469a:989455868,db09dd8b43e262503240c03d610b6319:2042810004,9fd8998b7ee262507c4c465ee24af515:1802444917,6268150b53e262504b93694ac73dcb87:989455868,a148954b82e262507a51477cce2c0ee9:1821348935,e3c7150bb8e262503c20c2a5bc629936:2042810004,be5145c799626250b51344bb1f6554d7:1641238221,e83c748f432262504961a5d0b4365dc4:1686216765</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-12 06:39:45</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>d652dfd869a14d90ac40975c3df1cde4</sys_id>
+        <sys_metadata>1cdb3ccfc3226250ca67153ed401316a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>if editable flag is false then make ent</sys_name>
+        <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
+        <sys_parent display_value="Complaint Details">b2a6c3d1c32ae610ca67153ed401316a</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
+        <sys_scope_delete display_value="">08c79c63f4f541ba80adc6feb813efc1</sys_scope_delete>
+        <sys_update_name>sys_script_client_1cdb3ccfc3226250ca67153ed401316a</sys_update_name>
+        <sys_update_version display_value="sys_script_client_1cdb3ccfc3226250ca67153ed401316a">f6e917efc36e2650ca67153ed4013121</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-12 06:39:45</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

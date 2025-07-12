@@ -14,9 +14,13 @@
   if (isLoading || !newValue) return;
  
   var cleaned = newValue.trim();
- 
   var fieldName = 'mobile_number';
   var phoneRegex = /^\d{10}$/;
+
+  if (!/^\d+$/.test(newValue)) {
+        g_form.showFieldMsg(fieldName, 'Please enter numeric digits only.', 'error');
+        return;
+    }
  
   if (!phoneRegex.test(cleaned)) {
     g_form.showFieldMsg(fieldName, 'Phone number must be exactly 10 digits.', 'error');
@@ -32,7 +36,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>3530369ec3666e10ca67153ed4013144</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Validate Mobile Number</sys_name>
         <sys_overrides/>
         <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
@@ -40,7 +44,7 @@
         <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
         <sys_update_name>sys_script_client_3530369ec3666e10ca67153ed4013144</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-08 10:09:47</sys_updated_on>
+        <sys_updated_on>2025-07-12 07:05:33</sys_updated_on>
         <table>x_1777185_home_s_0_customer_details</table>
         <type>onChange</type>
         <ui_type>10</ui_type>
