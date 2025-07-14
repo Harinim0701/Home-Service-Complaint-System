@@ -7,7 +7,7 @@
 
 }]]></client_script_v2>
         <comments/>
-        <condition>current.state == 'requested'</condition>
+        <condition>current.state == 'requested' &amp;&amp;  (gs.hasRole('x_1777185_home_s_0.reviewer'))</condition>
         <form_action>true</form_action>
         <form_button>true</form_button>
         <form_button_v2>false</form_button_v2>
@@ -34,7 +34,7 @@
     var comments = g_form.getValue('comments');
    
     if (!comments.trim()) {
-        g_form.showFieldMsg('comments', 'Comments are mandatory when sending back.', 'error');
+        g_form.showFieldMsg('comments', 'Comments are mandatory while sending back.', 'error');
         return false;
     }
  
@@ -52,7 +52,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>afd4d81fc326a250ca67153ed40131e2</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Send Back</sys_name>
         <sys_overrides/>
         <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
@@ -60,7 +60,7 @@
         <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
         <sys_update_name>sys_ui_action_afd4d81fc326a250ca67153ed40131e2</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-10 07:24:57</sys_updated_on>
+        <sys_updated_on>2025-07-14 05:10:35</sys_updated_on>
         <table>sysapproval_approver</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_1777185_home_s_0.Validate Attachments</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>Validate Attachments</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var ValidateAttachments= Class.create();
+ValidateAttachments.prototype = Object.extendsObject(AbstractAjaxProcessor, {
+    getFileName: function() {
+        var attachmentId = this.getParameter('sysparm_attachment_id');
+        var gr = new GlideRecord('sys_attachment');
+        if (gr.get(attachmentId)) {
+            return gr.file_name;
+        }
+        return '';
+    }
+});
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-07 16:28:26</sys_created_on>
+        <sys_id>6cd5b696c3a66e10ca67153ed4013105</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Validate Attachments</sys_name>
+        <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
+        <sys_update_name>sys_script_include_6cd5b696c3a66e10ca67153ed4013105</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-08 12:54:50</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</application>
+        <file_path/>
+        <instance_id>a3b5f8603b7c2e14baf6048aa4e45a23</instance_id>
+        <instance_name>dev317882</instance_name>
+        <name>sys_script_include_6cd5b696c3a66e10ca67153ed4013105</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_1777185_home_s_0.Validate Attachments&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description/&gt;&lt;mobile_callable&gt;false&lt;/mobile_callable&gt;&lt;name&gt;Validate Attachments&lt;/name&gt;&lt;sandbox_callable&gt;false&lt;/sandbox_callable&gt;&lt;script&gt;&lt;![CDATA[var ValidateAttachments= Class.create();
+ValidateAttachments.prototype = Object.extendsObject(AbstractAjaxProcessor, {
+    getFileName: function() {
+        var attachmentId = this.getParameter('sysparm_attachment_id');
+        var gr = new GlideRecord('sys_attachment');
+        if (gr.get(attachmentId)) {
+            return gr.file_name;
+        }
+        return '';
+    }
+});
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-07-07 16:28:26&lt;/sys_created_on&gt;&lt;sys_id&gt;6cd5b696c3a66e10ca67153ed4013105&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;Validate Attachments&lt;/sys_name&gt;&lt;sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0"&gt;2494ce5dc3a2e610ca67153ed40131f2&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Home Services Complaint System"&gt;2494ce5dc3a2e610ca67153ed40131f2&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_6cd5b696c3a66e10ca67153ed4013105&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-07-08 12:54:50&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-824079163</payload_hash>
+        <record_name>Validate Attachments</record_name>
+        <reverted_from/>
+        <source>2094ce5dc3a2e610ca67153ed40131f7</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-08 12:54:50</sys_created_on>
+        <sys_id>64be0feec3aeae10ca67153ed40131fa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>197ea1a6f8e0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-08 12:54:50</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>2cbe0feec2aeae104bc9107860308cf9</update_guid>
+        <update_guid_history>2cbe0feec2aeae104bc9107860308cf9:-824079163,cc2e032e39eeae10e1bcd8cea9b856cc:1870640891,0406fe96a5a66e1005758cfe00add0b2:726998528</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-12 11:40:51</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>108e0e3f6382449e8cfb06c832f24664</sys_id>
+        <sys_metadata>6cd5b696c3a66e10ca67153ed4013105</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Validate Attachments</sys_name>
+        <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
+        <sys_scope_delete display_value="">08c79c63f4f541ba80adc6feb813efc1</sys_scope_delete>
+        <sys_update_name>sys_script_include_6cd5b696c3a66e10ca67153ed4013105</sys_update_name>
+        <sys_update_version display_value="sys_script_include_6cd5b696c3a66e10ca67153ed4013105">64be0feec3aeae10ca67153ed40131fa</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-12 11:40:51</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+
+  (function ($scope) {
+  $scope.slaData = null;
+
+  function calculateSLA(priority, createdDate) {
+    const now = new Date();
+    const created = new Date(createdDate);
+    let slaHours = 0;
+
+    if (priority === 'High') slaHours = 48;
+    else if (priority === 'Medium') slaHours = 96;
+    else slaHours = 168;
+
+    const due = new Date(created.getTime() + slaHours * 3600000);
+    const diffMs = due - now;
+    const diffHrs = Math.floor(diffMs / 3600000);
+    const diffMins = Math.floor((diffMs % 3600000) / 60000);
+    const timeUsedMs = now - created;
+    const percentageUsed = Math.min(100, (timeUsedMs / (slaHours * 3600000)) * 100);
+
+    let status = '';
+    let color = 'green';
+
+    if (diffMs > 86400000) {
+      status = 'healthy';
+      color = 'green';
+    } else if (diffMs > 0) {
+      status = 'near breach';
+      color = 'yellow';
+    } else {
+      status = 'breached';
+      color = 'red';
+    }
+
+    return {
+      due: due.toLocaleString(),
+      remaining: diffMs > 0 ? `${diffHrs}h ${diffMins}m remaining` : `Overdue by ${Math.abs(diffHrs)}h ${Math.abs(diffMins)}m`,
+      color: color,
+      percentageUsed: percentageUsed,
+      status: status
+    };
+  }
+
+  if ($scope.data.complaint && $scope.data.complaint.sys_id) {
+    $scope.slaData = calculateSLA($scope.data.complaint.priority, $scope.data.complaint.created);
+  }
+});
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>&#13;
+.progress {&#13;
+  height: 20px;&#13;
+  margin-bottom: 10px;&#13;
+}&#13;
+&#13;
+.text-green {&#13;
+  color: #28a745;&#13;
+}&#13;
+&#13;
+.text-yellow {&#13;
+  color: #ffc107;&#13;
+}&#13;
+&#13;
+.text-red {&#13;
+  color: #dc3545;&#13;
+}&#13;
+&#13;
+.bg-green {&#13;
+  background-color: #28a745 !important;&#13;
+}&#13;
+&#13;
+.bg-yellow {&#13;
+  background-color: #ffc107 !important;&#13;
+}&#13;
+&#13;
+.bg-red {&#13;
+  background-color: #dc3545 !important;&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>sld</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>SLA Count Down Tracker </name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  var complaint = {};
+  var user = gs.getUserID();
+  var gr = new GlideRecord('x_your_scope_complaint'); // Replace with your table name
+
+  gr.addQuery('opened_by', user); // assuming 'opened_by' references the requester
+  gr.addQuery('state', 'NOT IN', 'Resolved,Rejected,Cancelled'); // filter active
+  gr.orderByDesc('sys_created_on');
+  gr.setLimit(1);
+
+  if (gr.query() && gr.next()) {
+    complaint = {
+      sys_id: gr.getValue('sys_id'),
+      created: gr.getValue('sys_created_on'),
+      priority: gr.getValue('priority'), // High, Medium, Low
+      status: gr.getValue('state')
+    };
+  }
+
+  return {
+    complaint: complaint
+  };
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-13 09:09:28</sys_created_on>
+        <sys_id>34588810c3322a50ca67153ed401319e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>SLA Count Down Tracker </sys_name>
+        <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
+        <sys_update_name>sp_widget_34588810c3322a50ca67153ed401319e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-13 09:09:28</sys_updated_on>
+        <template><![CDATA[<div ng-if="slaData">
+  <h4>SLA Countdown</h4>
+  <p><strong>Priority:</strong> {{data.complaint.priority}}</p>
+  <p><strong>Due By:</strong> {{slaData.due}}</p>
+  <p>
+    <strong>Status:</strong>
+    <span class="text-{{slaData.color}}">{{slaData.remaining}}</span>
+  </p>
+
+  <div class="progress" uib-tooltip="Resolution expected based on priority SLA defined">
+    <div class="progress-bar bg-{{slaData.color}}" role="progressbar"
+         style="width: {{slaData.percentageUsed}}%">
+      {{slaData.percentageUsed | number:0}}%
+    </div>
+  </div>
+</div>
+
+<div ng-if="!slaData">
+  <p>No active complaints found.</p>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>

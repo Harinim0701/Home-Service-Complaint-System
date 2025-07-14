@@ -38,13 +38,13 @@
         <lookup_value/>
         <macro/>
         <macroponent/>
-        <mandatory>true</mandatory>
+        <mandatory>false</mandatory>
         <map_to_field>true</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
         <name>contact_number</name>
         <not_available_conversation>false</not_available_conversation>
-        <order>700</order>
+        <order>900</order>
         <post_insert_script/>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
@@ -79,14 +79,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-07-07 17:25:35</sys_created_on>
         <sys_id>39f24b1ac3e66e10ca67153ed4013168</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>Contact Number</sys_name>
         <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
         <sys_update_name>item_option_new_39f24b1ac3e66e10ca67153ed4013168</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-09 11:31:25</sys_updated_on>
+        <sys_updated_on>2025-07-13 15:59:18</sys_updated_on>
         <table/>
         <tooltip/>
         <topic_block/>

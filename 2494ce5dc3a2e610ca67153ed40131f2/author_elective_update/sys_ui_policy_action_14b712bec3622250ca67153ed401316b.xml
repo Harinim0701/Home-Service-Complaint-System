@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="DELETE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>reason_to_cancel</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>false</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-09 03:33:20</sys_created_on>
+        <sys_id>14b712bec3622250ca67153ed401316b</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>reason_to_cancel</sys_name>
+        <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
+        <sys_update_name>sys_ui_policy_action_14b712bec3622250ca67153ed401316b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-12 08:01:08</sys_updated_on>
+        <table>x_1777185_home_s_0_complaint_details</table>
+        <ui_policy display_value="Hide reason if state is not under review">db25d6bac3622250ca67153ed4013112</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>true</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="DELETE" query="documentkey=14b712bec3622250ca67153ed401316b"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</application>
+        <file_path/>
+        <instance_id>a3b5f8603b7c2e14baf6048aa4e45a23</instance_id>
+        <instance_name>dev317882</instance_name>
+        <name>sys_ui_policy_action_14b712bec3622250ca67153ed401316b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action"><sys_ui_policy_action action="INSERT_OR_UPDATE"><cleared>false</cleared><disabled>ignore</disabled><field>reason_to_cancel</field><field_message/><field_message_type>none</field_message_type><mandatory>false</mandatory><sys_class_name>sys_ui_policy_action</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-07-09 03:33:20</sys_created_on><sys_id>14b712bec3622250ca67153ed401316b</sys_id><sys_mod_count>5</sys_mod_count><sys_name>reason_to_cancel</sys_name><sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package><sys_policy/><sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope><sys_update_name>sys_ui_policy_action_14b712bec3622250ca67153ed401316b</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-07-12 08:01:08</sys_updated_on><table>x_1777185_home_s_0_complaint_details</table><ui_policy display_value="Hide reason if state is not under review">db25d6bac3622250ca67153ed4013112</ui_policy><value/><value_action>ignore</value_action><visible>true</visible></sys_ui_policy_action><sys_translated_text action="delete_multiple" query="documentkey=14b712bec3622250ca67153ed401316b"/></record_update>]]></payload>
+        <payload_hash>968477946</payload_hash>
+        <record_name>reason_to_cancel</record_name>
+        <reverted_from/>
+        <source>7d9a10c7c36e2250ca67153ed401315d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-12 08:01:08</sys_created_on>
+        <sys_id>61d17677c362a650ca67153ed4013155</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>197fda6fcc60000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-12 08:01:08</sys_updated_on>
+        <type>UI Policy Action</type>
+        <update_guid>e5d176775462a650fa43848fbe575654</update_guid>
+        <update_guid_history>e5d176775462a650fa43848fbe575654:968477946,35a07e733962a65076dcc6b3c3e53892:-1698591585,00a0fa731e62a650a30cb8b9cb219f7d:1416813914,0abf6e736262a650b6f67c9750aa9c01:-1485067923,efee66337f62a6503e94efe78c7c5f5e:1185381768,ddc7d6baad622250183f6cbbd4970f7e:-1485067923</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-13 11:44:00</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy_action">sys_ui_policy_action</sys_db_object>
+        <sys_id>20ab7dfa27e649828b3cd01e3ff39df9</sys_id>
+        <sys_metadata>14b712bec3622250ca67153ed401316b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>reason_to_cancel</sys_name>
+        <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
+        <sys_scope_delete display_value="">08c79c63f4f541ba80adc6feb813efc1</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_action_14b712bec3622250ca67153ed401316b</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_action_14b712bec3622250ca67153ed401316b">61d17677c362a650ca67153ed4013155</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-13 11:44:00</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

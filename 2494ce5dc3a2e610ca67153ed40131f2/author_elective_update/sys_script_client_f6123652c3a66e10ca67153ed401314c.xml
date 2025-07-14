@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>supporting_documents</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Validate Supporting Documents</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+    if (isLoading || newValue == '') return;
+
+    var ga = new GlideAjax('x_1777185_home_s_0.Validate Attachments');
+    ga.addParam('sysparm_name', 'getFileName');
+    ga.addParam('sysparm_attachment_id', newValue);
+    ga.getXMLAnswer(function(fileName) {
+        fileName = fileName.toLowerCase();
+        if (!(fileName.endsWith('.pdf') || fileName.endsWith('.png') || fileName.endsWith('.jpeg'))) {
+            g_form.clearValue('attachment_file');
+            g_form.showFieldMsg('attachment_file', 'Only PDF, PNG, or JPEG files are allowed.', 'error');
+        }
+    });
+}
+
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-07 16:16:03</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f6123652c3a66e10ca67153ed401314c</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Validate Supporting Documents</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
+        <sys_update_name>sys_script_client_f6123652c3a66e10ca67153ed401314c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-10 09:03:53</sys_updated_on>
+        <table>x_1777185_home_s_0_complaint_details</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</application>
+        <file_path/>
+        <instance_id>a3b5f8603b7c2e14baf6048aa4e45a23</instance_id>
+        <instance_name>dev317882</instance_name>
+        <name>sys_script_client_f6123652c3a66e10ca67153ed401314c</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field&gt;supporting_documents&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Validate Supporting Documents&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+    if (isLoading || newValue == '') return;
+
+    var ga = new GlideAjax('x_1777185_home_s_0.Validate Attachments');
+    ga.addParam('sysparm_name', 'getFileName');
+    ga.addParam('sysparm_attachment_id', newValue);
+    ga.getXMLAnswer(function(fileName) {
+        fileName = fileName.toLowerCase();
+        if (!(fileName.endsWith('.pdf') || fileName.endsWith('.png') || fileName.endsWith('.jpeg'))) {
+            g_form.clearValue('attachment_file');
+            g_form.showFieldMsg('attachment_file', 'Only PDF, PNG, or JPEG files are allowed.', 'error');
+        }
+    });
+}
+
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-07-07 16:16:03&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;f6123652c3a66e10ca67153ed401314c&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_name&gt;Validate Supporting Documents&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0"&gt;2494ce5dc3a2e610ca67153ed40131f2&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Home Services Complaint System"&gt;2494ce5dc3a2e610ca67153ed40131f2&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_f6123652c3a66e10ca67153ed401314c&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-07-10 09:03:53&lt;/sys_updated_on&gt;&lt;table&gt;x_1777185_home_s_0_complaint_details&lt;/table&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>70470289</payload_hash>
+        <record_name>Validate Supporting Documents</record_name>
+        <reverted_from/>
+        <source>7d9a10c7c36e2250ca67153ed401315d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-10 09:03:53</sys_created_on>
+        <sys_id>050d2813c3e6a250ca67153ed4013176</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>197f393b5af0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-10 09:03:53</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>c90d281396e6a250ca4aae83aaeb8975</update_guid>
+        <update_guid_history>c90d281396e6a250ca4aae83aaeb8975:70470289,5d9fcbae32eeae10c97e33a68edc8e55:616251761,d4ce47aeaaeeae109155029b7c0d8106:70470289,82c103d68be66e102fcbb4c3aa520757:-1252978532,9495fe5652a66e10b719e4f5f0908da8:8224836,9623b61284a66e109fdc0dc901e3ffbf:-573702866</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-12 11:41:07</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>af306f78757c42f898120bb45a8bc801</sys_id>
+        <sys_metadata>f6123652c3a66e10ca67153ed401314c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Validate Supporting Documents</sys_name>
+        <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
+        <sys_parent display_value="Complaint Details">b2a6c3d1c32ae610ca67153ed401316a</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
+        <sys_scope_delete display_value="">08c79c63f4f541ba80adc6feb813efc1</sys_scope_delete>
+        <sys_update_name>sys_script_client_f6123652c3a66e10ca67153ed401314c</sys_update_name>
+        <sys_update_version display_value="sys_script_client_f6123652c3a66e10ca67153ed401314c">050d2813c3e6a250ca67153ed4013176</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-12 11:41:07</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

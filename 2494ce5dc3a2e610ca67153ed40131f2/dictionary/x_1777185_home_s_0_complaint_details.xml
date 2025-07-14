@@ -12,7 +12,7 @@
         <element label="Service Name" mandatory="true" max_length="50" name="service_name" type="string"/>
         <element label="Complaint Details" mandatory="true" max_length="4000" name="complaint_details" type="string"/>
         <element label="City" max_length="50" name="city" type="string"/>
-        <element choice="3" default="1" label="Current Status" max_length="40" name="current_status" type="choice">
+        <element choice="3" default="1" label="Current Status" max_length="40" name="current_status" read_only="true" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Send Back" sequence="7" value="7"/>
                 <element inactive_on_update="false" label="Re submitted" sequence="6" value="8"/>

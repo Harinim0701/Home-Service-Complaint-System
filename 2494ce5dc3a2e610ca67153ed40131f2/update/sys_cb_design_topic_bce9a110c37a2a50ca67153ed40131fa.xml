@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_design_topic">
+    <sys_cb_design_topic action="INSERT_OR_UPDATE">
+        <compiled_topic display_value="Home Service Complaint System Bot">e4e9a110c37a2a50ca67153ed40131c1</compiled_topic>
+        <design_definition>{"type":"FlowTopic","triggers":[{"type":"Trigger","name":"f233e7dea8ad42dbaafa05eaf15f1a21","triggerType":"request","applicability":{"type":"Applicability","mode":"script","value":"true"},"id":"f233e7dea8ad42dbaafa05eaf15f1a21"}],"goals":[{"name":"primary","trigger_id":"f233e7dea8ad42dbaafa05eaf15f1a21","nodes":[{"type":"StartGoal","goal_id":"primary","greeting_msg":{"type":"String","mode":"string","value":""},"id":"9d7792ebfb8741698adcfe85f0c4eb7f","name":"Start","expert_mode":false},{"type":"TerminateGoal","goal_id":"primary","confirmation_msg":{"type":"String","mode":"string","value":""},"id":"f26f8bfa9a684350a7544fdd0f3810ca","name":"End","expert_mode":false},{"type":"TextOutputPrompt","value":[{"type":"String","mode":"string","value":"gs.getMessageLang(\"Hi {0} ,\", vaContext.getRequesterLang(), [vaInputs.user.name.getDisplayValue()])"}],"request_feedback":true,"id":"b6c2d685396647039715c75e0e42d30a","name":"Welcome Message","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"secure":false},{"type":"ChoiceInputPrompt","expression_mode":"simple","metadataScript":"","cardName":"","cardFields":[],"id":"634d2a5abdb44e27a9d883cacaf7bcb7","name":"Choose action","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"variable_id":"0f65aee7f68846eda5b797646bbc3fab","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"What could you like to do ?\", vaContext.getRequesterLang())"},"request_feedback":false,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"description":""},{"type":"Decision","name":"Decision","branches":[{"type":"Branch","label":"Track the status","expression":{"type":"Applicability","mode":"query","value":"choose_action=Track the current status "},"id":"e6eb58cb561f402fa989ba985aa16fe7","name":"Track the status","expert_mode":false},{"type":"Branch","label":"Cancel the request","expression":{"type":"Applicability","mode":"query","value":"choose_action=Cancel the complaint"},"id":"db40d64643da476f9b48c9dfd1d421ae","name":"Cancel the request","expert_mode":false}],"id":"78540f2f73ec41189b1599c2432bfbb5","goal_id":"primary","expert_mode":false},{"type":"TerminateGoal","goal_id":"primary","id":"e93fa40f65e74b4b9d4c75359f6a725e","name":"ImplicitEnd__f56dcc8a343347b5bcf918d34555d3ce","expert_mode":false},{"type":"CRUDAction","mode":"read","read_mode":"variable","query":"number={{vaInputs.get_reference_number}}","variable_id":"abd20217730f49f2b918c8976b6294eb","id":"24668afaf4ee4d7b8a64fa20eb6e8d29","name":"Get the requested record","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"condition":{"type":"Condition","mode":"glide_query","value":"number={{vaInputs.get_reference_number}}"}},{"type":"RecordOutputPrompt","mode":"variable","table":"x_1777185_home_s_0_complaint_details","variable_id":"abd20217730f49f2b918c8976b6294eb","fields":["current_status","customer_name","service_name","case_priority"],"request_feedback":true,"id":"45999c7c6c1c47da8c41b39caae048f3","name":"Show the record","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"condition":{"type":"Condition","mode":"glide_query","value":""}},{"type":"InputPrompt","variable_id":"28be0c4e2dd14f2fbd54b7701419392b","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"Do you want to end the conversation?\", vaContext.getRequesterLang())"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"request_feedback":false,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"id":"2f7a2d3fc7de4b63a9d2272cf0b174e9","name":"End Card","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"description":""},{"type":"Decision","name":"Decision","branches":[{"type":"Branch","label":"true","expression":{"type":"Applicability","mode":"query","value":"end_card=true"},"id":"673739a661794fb5a897722b98203b9c","name":"true","expert_mode":false},{"type":"Branch","label":"false","expression":{"type":"Applicability","mode":"query","value":"end_card=false"},"id":"4e3c92153cbb4379acd3ae831388c9e5","name":"false","expert_mode":false}],"id":"739a4b0888194d139eba968b58611d65","goal_id":"primary","expert_mode":false},{"type":"InputPrompt","variable_id":"5dfdef72aca349c4b95ed43e8c993725","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"Please enter your  Reference Number.\", vaContext.getRequesterLang())"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"request_feedback":true,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"id":"762866d7a92045aeaa15d0db0b3131ef","name":"Get Reference Number","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"formatType":"Text","validationScript":"","description":""}],"edges":[{"type":"Edge","source_node_id":"78540f2f73ec41189b1599c2432bfbb5","target_node_id":"24668afaf4ee4d7b8a64fa20eb6e8d29","branch_id":"e6eb58cb561f402fa989ba985aa16fe7","id":"2849779aa6924a63b8d833c898f89593","name":"e6eb58cb561f402fa989ba985aa16fe7"},{"type":"Edge","source_node_id":"739a4b0888194d139eba968b58611d65","target_node_id":"f26f8bfa9a684350a7544fdd0f3810ca","branch_id":"673739a661794fb5a897722b98203b9c","id":"6e6cd62739534f82833f592b84beb673","name":"673739a661794fb5a897722b98203b9c"},{"type":"Edge","source_node_id":"739a4b0888194d139eba968b58611d65","target_node_id":"634d2a5abdb44e27a9d883cacaf7bcb7","branch_id":"4e3c92153cbb4379acd3ae831388c9e5","id":"9fcd901abe2f40049ae9f2b3e3d32af2","name":"4e3c92153cbb4379acd3ae831388c9e5"},{"type":"Edge","source_node_id":"9d7792ebfb8741698adcfe85f0c4eb7f","target_node_id":"b6c2d685396647039715c75e0e42d30a","id":"97951c16d21c4251b22c86a6ebb0ea21"},{"type":"Edge","source_node_id":"b6c2d685396647039715c75e0e42d30a","target_node_id":"634d2a5abdb44e27a9d883cacaf7bcb7","id":"8fee18bdbeb547b188a49c3e4fa0c233"},{"type":"Edge","source_node_id":"78540f2f73ec41189b1599c2432bfbb5","target_node_id":"e93fa40f65e74b4b9d4c75359f6a725e","branch_id":"db40d64643da476f9b48c9dfd1d421ae","id":"e661bc487d0340aa8bb896e9ed6d22c8","name":"db40d64643da476f9b48c9dfd1d421ae"},{"type":"Edge","source_node_id":"24668afaf4ee4d7b8a64fa20eb6e8d29","target_node_id":"45999c7c6c1c47da8c41b39caae048f3","id":"d09ba90ae1b34f959144904f00153a5e"},{"type":"Edge","source_node_id":"45999c7c6c1c47da8c41b39caae048f3","target_node_id":"2f7a2d3fc7de4b63a9d2272cf0b174e9","id":"510ef3aed05440ac8247886022bf829f"},{"type":"Edge","source_node_id":"2f7a2d3fc7de4b63a9d2272cf0b174e9","target_node_id":"739a4b0888194d139eba968b58611d65","id":"9ab1c247314b4c0c9c0b226bdc4ca060"},{"type":"Edge","source_node_id":"634d2a5abdb44e27a9d883cacaf7bcb7","target_node_id":"762866d7a92045aeaa15d0db0b3131ef","id":"5f843c6bc38a4f95a78a97322ceae5ea"},{"type":"Edge","source_node_id":"762866d7a92045aeaa15d0db0b3131ef","target_node_id":"78540f2f73ec41189b1599c2432bfbb5","id":"a4bbdce626334f37b8c54b5f306d65e8"}],"id":"primary"}],"script_variables":[],"glide_variables":[{"type":"Reference","table":"sys_user","auto_select":false,"id":"current-user","name":"user","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false},{"type":"Choice","choices":[{"name":"Cancel the complaint","element":"Cancel the complaint"},{"name":"Track the current status ","element":"Track the current status "}],"id":"0f65aee7f68846eda5b797646bbc3fab","name":"choose_action","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false,"label":"Choose Action"},{"type":"String","name":"get_reference_number","list":false,"id":"5dfdef72aca349c4b95ed43e8c993725","formatType":"Text","validationScript":"","secure":false,"sensitive":false,"aiInput":false},{"type":"Reference","table":"x_1777185_home_s_0_complaint_details","auto_select":false,"id":"abd20217730f49f2b918c8976b6294eb","name":"get_the_requested_record","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false},{"type":"True/False","id":"28be0c4e2dd14f2fbd54b7701419392b","name":"end_card","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false}],"applicability":{"type":"Applicability","mode":"script","value":"true"},"roles":[],"scope":"2494ce5dc3a2e610ca67153ed40131f2","domain":"global","topic_type":"STANDARD","channels":[],"dialog_acts_enabled":false,"id":"4892ed14c33a2a50ca67153ed40131d3","name":"Home Service Complaint System Bot","key_phrases":["Home Service Complaint System Bot"],"nlu_provider":"","nlu_model":"","nlu_model_label":"","nlu_intent":"","nlu_intent_label":"","flexible_conversation_switching":false,"autopilot_topic":false,"design_categories":[],"triggerable_by_notification":false,"description":"","model_type":"nlu_keyword","foundational":false,"modify_confirmation_enabled":false,"context_profiles":[],"title":"Home Service Complaint System Bot","library":false,"csTopicId":"e4e9a110c37a2a50ca67153ed40131c1","readOnly":false,"nluMapping":"[]"}</design_definition>
+        <design_topic_id>4892ed14c33a2a50ca67153ed40131d3</design_topic_id>
+        <graph>{
+  "graph_api_version": "1.0.74",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "9d7792ebfb8741698adcfe85f0c4eb7f": {
+          "id": "9d7792ebfb8741698adcfe85f0c4eb7f",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "f26f8bfa9a684350a7544fdd0f3810ca": {
+          "id": "f26f8bfa9a684350a7544fdd0f3810ca",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "b6c2d685396647039715c75e0e42d30a": {
+          "id": "b6c2d685396647039715c75e0e42d30a",
+          "stepType": "TextOutput",
+          "name": "Welcome Message",
+          "secure": false,
+          "value": [
+            {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Hi "
+                    },
+                    {
+                      "type": "datapill",
+                      "dataPill": {
+                        "value": "{{vaInputs.user.name}}",
+                        "displayValue": "Input Variables➛User➛Name"
+                      },
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ]
+                    },
+                    {
+                      "text": " ,"
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "_key": "e9b4712c454c4b17b3795ca386649e32"
+            }
+          ],
+          "requestFeedback": true,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "634d2a5abdb44e27a9d883cacaf7bcb7": {
+          "name": "Choose action",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "What could you like to do ?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "0f65aee7f68846eda5b797646bbc3fab",
+          "detailDescription": "",
+          "id": "634d2a5abdb44e27a9d883cacaf7bcb7",
+          "stepType": "ChoicePrompt",
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        },
+        "78540f2f73ec41189b1599c2432bfbb5": {
+          "id": "78540f2f73ec41189b1599c2432bfbb5",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "e93fa40f65e74b4b9d4c75359f6a725e": {
+          "id": "e93fa40f65e74b4b9d4c75359f6a725e",
+          "stepType": "ImplicitEnd"
+        },
+        "24668afaf4ee4d7b8a64fa20eb6e8d29": {
+          "id": "24668afaf4ee4d7b8a64fa20eb6e8d29",
+          "stepType": "LookupRecord",
+          "name": "Get the requested record",
+          "condition": {
+            "mode": "glide_query",
+            "value": "number={{vaInputs.get_reference_number}}"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "variableId": "abd20217730f49f2b918c8976b6294eb"
+        },
+        "45999c7c6c1c47da8c41b39caae048f3": {
+          "id": "45999c7c6c1c47da8c41b39caae048f3",
+          "stepType": "RecordOutput",
+          "name": "Show the record",
+          "variableId": "abd20217730f49f2b918c8976b6294eb",
+          "cardTemplate": "General",
+          "cardFields": {},
+          "mode": "variable",
+          "tableName": "x_1777185_home_s_0_complaint_details",
+          "fields": [
+            "current_status",
+            "customer_name",
+            "service_name",
+            "case_priority"
+          ],
+          "cardDefinition": {
+            "name": "Record",
+            "value": "General"
+          },
+          "requestFeedback": true,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "condition": {
+            "mode": "glide_query",
+            "value": ""
+          }
+        },
+        "2f7a2d3fc7de4b63a9d2272cf0b174e9": {
+          "id": "2f7a2d3fc7de4b63a9d2272cf0b174e9",
+          "stepType": "BooleanPrompt",
+          "name": "End Card",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Do you want to end the conversation?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "28be0c4e2dd14f2fbd54b7701419392b",
+          "detailDescription": ""
+        },
+        "739a4b0888194d139eba968b58611d65": {
+          "id": "739a4b0888194d139eba968b58611d65",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "762866d7a92045aeaa15d0db0b3131ef": {
+          "id": "762866d7a92045aeaa15d0db0b3131ef",
+          "stepType": "TextPrompt",
+          "name": "Get Reference Number",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Please enter your  Reference Number."
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "5dfdef72aca349c4b95ed43e8c993725",
+          "detailDescription": "",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          },
+          "requestFeedback": true
+        }
+      },
+      "edges": [
+        {
+          "id": "2849779aa6924a63b8d833c898f89593",
+          "edgeType": "Branch",
+          "source": "78540f2f73ec41189b1599c2432bfbb5",
+          "target": "24668afaf4ee4d7b8a64fa20eb6e8d29",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.choose_action=Track the current status ",
+            "mode": "query"
+          },
+          "label": "Track the status"
+        },
+        {
+          "id": "6e6cd62739534f82833f592b84beb673",
+          "edgeType": "Branch",
+          "source": "739a4b0888194d139eba968b58611d65",
+          "target": "f26f8bfa9a684350a7544fdd0f3810ca",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.end_card=true",
+            "mode": "query"
+          },
+          "label": "true"
+        },
+        {
+          "id": "9fcd901abe2f40049ae9f2b3e3d32af2",
+          "edgeType": "Branch",
+          "source": "739a4b0888194d139eba968b58611d65",
+          "target": "634d2a5abdb44e27a9d883cacaf7bcb7",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.end_card=false",
+            "mode": "query"
+          },
+          "label": "false"
+        },
+        {
+          "id": "97951c16d21c4251b22c86a6ebb0ea21",
+          "edgeType": "Edge",
+          "source": "9d7792ebfb8741698adcfe85f0c4eb7f",
+          "target": "b6c2d685396647039715c75e0e42d30a",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "8fee18bdbeb547b188a49c3e4fa0c233",
+          "edgeType": "Edge",
+          "source": "b6c2d685396647039715c75e0e42d30a",
+          "target": "634d2a5abdb44e27a9d883cacaf7bcb7",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "e661bc487d0340aa8bb896e9ed6d22c8",
+          "edgeType": "Branch",
+          "source": "78540f2f73ec41189b1599c2432bfbb5",
+          "target": "e93fa40f65e74b4b9d4c75359f6a725e",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.choose_action=Cancel the complaint",
+            "mode": "query"
+          },
+          "label": "Cancel the request"
+        },
+        {
+          "id": "d09ba90ae1b34f959144904f00153a5e",
+          "edgeType": "Edge",
+          "source": "24668afaf4ee4d7b8a64fa20eb6e8d29",
+          "target": "45999c7c6c1c47da8c41b39caae048f3",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "510ef3aed05440ac8247886022bf829f",
+          "edgeType": "Edge",
+          "source": "45999c7c6c1c47da8c41b39caae048f3",
+          "target": "2f7a2d3fc7de4b63a9d2272cf0b174e9",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "9ab1c247314b4c0c9c0b226bdc4ca060",
+          "edgeType": "Edge",
+          "source": "2f7a2d3fc7de4b63a9d2272cf0b174e9",
+          "target": "739a4b0888194d139eba968b58611d65",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "5f843c6bc38a4f95a78a97322ceae5ea",
+          "edgeType": "Edge",
+          "source": "634d2a5abdb44e27a9d883cacaf7bcb7",
+          "target": "762866d7a92045aeaa15d0db0b3131ef",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "a4bbdce626334f37b8c54b5f306d65e8",
+          "edgeType": "Edge",
+          "source": "762866d7a92045aeaa15d0db0b3131ef",
+          "target": "78540f2f73ec41189b1599c2432bfbb5",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "current-user": {
+      "category": "vaInputs",
+      "id": "current-user",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    },
+    "0f65aee7f68846eda5b797646bbc3fab": {
+      "id": "0f65aee7f68846eda5b797646bbc3fab",
+      "name": "choose_action",
+      "label": "Choose Action",
+      "varType": "choice",
+      "choices": [
+        {
+          "label": "Cancel the complaint",
+          "value": "Cancel the complaint"
+        },
+        {
+          "label": "Track the current status ",
+          "value": "Track the current status "
+        }
+      ],
+      "category": "vaInputs",
+      "nodeId": "634d2a5abdb44e27a9d883cacaf7bcb7",
+      "isHidden": false
+    },
+    "5dfdef72aca349c4b95ed43e8c993725": {
+      "id": "5dfdef72aca349c4b95ed43e8c993725",
+      "name": "get_reference_number",
+      "label": "Get Reference Number",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTc1MjQyMTQ2OTg1NyBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      },
+      "nodeId": "762866d7a92045aeaa15d0db0b3131ef",
+      "isHidden": false
+    },
+    "abd20217730f49f2b918c8976b6294eb": {
+      "id": "abd20217730f49f2b918c8976b6294eb",
+      "name": "get_the_requested_record",
+      "label": "Get The Requested Record",
+      "varType": "reference",
+      "table": "x_1777185_home_s_0_complaint_details",
+      "category": "vaInputs",
+      "nodeId": "45999c7c6c1c47da8c41b39caae048f3",
+      "isHidden": false
+    },
+    "28be0c4e2dd14f2fbd54b7701419392b": {
+      "id": "28be0c4e2dd14f2fbd54b7701419392b",
+      "name": "end_card",
+      "label": "End Card",
+      "varType": "boolean",
+      "secure": false,
+      "category": "vaInputs",
+      "nodeId": "2f7a2d3fc7de4b63a9d2272cf0b174e9",
+      "isHidden": false
+    }
+  }
+}</graph>
+        <name>Home Service Complaint System Bot</name>
+        <sys_class_name>sys_cb_design_topic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-13 16:03:45</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>bce9a110c37a2a50ca67153ed40131fa</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>FlowTopic</sys_name>
+        <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
+        <sys_update_name>sys_cb_design_topic_bce9a110c37a2a50ca67153ed40131fa</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-13 16:14:15</sys_updated_on>
+        <type>FlowTopic</type>
+    </sys_cb_design_topic>
+</record_update>
