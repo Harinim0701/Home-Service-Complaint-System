@@ -70,6 +70,20 @@
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2025-07-10 11:58:08</sys_updated_on>
         </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-15 10:43:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>26a332f4c3beea50ca67153ed40131fc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_1777185_home_s_0_complaint_details" name="x_1777185_home_s_0_complaint_details" sys_domain="global" view="d5d4d5dba8aaa2508ece20f0991d7eff">11e49ddbc3aaa250ca67153ed40131c8</sys_ui_form>
+            <sys_ui_section caption="Activity Stream" display_value="Activity Stream" name="x_1777185_home_s_0_complaint_details" sys_domain="global" view="d5d4d5dba8aaa2508ece20f0991d7eff">62a332f4c3beea50ca67153ed40131f9</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-15 10:43:03</sys_updated_on>
+        </sys_ui_form_section>
         <sys_ui_form action="INSERT_OR_UPDATE">
             <name>x_1777185_home_s_0_complaint_details</name>
             <roles/>

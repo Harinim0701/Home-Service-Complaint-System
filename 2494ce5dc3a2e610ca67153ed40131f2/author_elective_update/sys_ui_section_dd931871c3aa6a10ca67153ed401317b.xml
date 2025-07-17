@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section action="DELETE" caption="Internal Notes" section_id="dd931871c3aa6a10ca67153ed401317b" sys_domain="global" table="x_1777185_home_s_0_complaint_details" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>notes</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-13 11:53:32</sys_created_on>
+            <sys_id>d7903cd8c3f22a50ca67153ed401314c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Internal Notes" display_value="Internal Notes" name="x_1777185_home_s_0_complaint_details" sys_domain="global" view="Default view">dd931871c3aa6a10ca67153ed401317b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-13 11:53:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>resolution</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-13 11:53:32</sys_created_on>
+            <sys_id>17903cd8c3f22a50ca67153ed401314d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Internal Notes" display_value="Internal Notes" name="x_1777185_home_s_0_complaint_details" sys_domain="global" view="Default view">dd931871c3aa6a10ca67153ed401317b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-13 11:53:32</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="DELETE">
+            <caption>Internal Notes</caption>
+            <header>false</header>
+            <name>x_1777185_home_s_0_complaint_details</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-05 15:21:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>dd931871c3aa6a10ca67153ed401317b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1777185_home_s_0_complaint_details</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
+            <sys_update_name>sys_ui_section_dd931871c3aa6a10ca67153ed401317b</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-05 15:21:52</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</application>
+        <file_path/>
+        <instance_id>a3b5f8603b7c2e14baf6048aa4e45a23</instance_id>
+        <instance_name>dev317882</instance_name>
+        <name>sys_ui_section_dd931871c3aa6a10ca67153ed401317b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="Internal Notes" section_id="dd931871c3aa6a10ca67153ed401317b" sys_domain="global" table="x_1777185_home_s_0_complaint_details" version="3" view=""><sys_ui_element action="INSERT_OR_UPDATE"><element>notes</element><position>0</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-07-13 11:53:32</sys_created_on><sys_id>d7903cd8c3f22a50ca67153ed401314c</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Internal Notes" display_value="Internal Notes" name="x_1777185_home_s_0_complaint_details" sys_domain="global" view="Default view">dd931871c3aa6a10ca67153ed401317b</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-07-13 11:53:32</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>resolution</element><position>1</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-07-13 11:53:32</sys_created_on><sys_id>17903cd8c3f22a50ca67153ed401314d</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Internal Notes" display_value="Internal Notes" name="x_1777185_home_s_0_complaint_details" sys_domain="global" view="Default view">dd931871c3aa6a10ca67153ed401317b</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-07-13 11:53:32</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption>Internal Notes</caption><header>false</header><name>x_1777185_home_s_0_complaint_details</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-07-05 15:21:52</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>dd931871c3aa6a10ca67153ed401317b</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1777185_home_s_0_complaint_details</sys_name><sys_overrides/><sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package><sys_policy/><sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope><sys_update_name>sys_ui_section_dd931871c3aa6a10ca67153ed401317b</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-07-05 15:21:52</sys_updated_on><sys_user/><title>false</title><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+        <payload_hash>1409763409</payload_hash>
+        <record_name>Complaint Details</record_name>
+        <reverted_from/>
+        <source>7d9a10c7c36e2250ca67153ed401315d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-13 11:53:32</sys_created_on>
+        <sys_id>d7903cd8c3f22a50ca67153ed401314f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19803a21c580000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-13 11:53:32</sys_updated_on>
+        <type>Form Layout</type>
+        <update_guid>9f903cd873f22a5011870eba4c5f9d4e</update_guid>
+        <update_guid_history>9f903cd873f22a5011870eba4c5f9d4e:1409763409,603f7a3a60662250a4236edd54dc4cba:-1087371169,0a0a00766666ee10f0df4355350fd487:-277715560,a993187136aa6a10be7aee7c46dbeba3:1409763409</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-17 05:09:52</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_section">sys_ui_section</sys_db_object>
+        <sys_id>075d4330fd30426f9bd5ad0229e93e21</sys_id>
+        <sys_metadata>dd931871c3aa6a10ca67153ed401317b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Internal Notes</sys_name>
+        <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
+        <sys_parent display_value="Complaint Details">b2a6c3d1c32ae610ca67153ed401316a</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
+        <sys_scope_delete display_value="">08c79c63f4f541ba80adc6feb813efc1</sys_scope_delete>
+        <sys_update_name>sys_ui_section_dd931871c3aa6a10ca67153ed401317b</sys_update_name>
+        <sys_update_version display_value="sys_ui_section_dd931871c3aa6a10ca67153ed401317b">d7903cd8c3f22a50ca67153ed401314f</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-17 05:09:52</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

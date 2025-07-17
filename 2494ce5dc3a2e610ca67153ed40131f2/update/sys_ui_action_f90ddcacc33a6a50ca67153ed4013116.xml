@@ -1,21 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
     <sys_ui_action action="INSERT_OR_UPDATE">
-        <action_name/>
+        <action_name>reject</action_name>
         <active>true</active>
-        <client>true</client>
-        <client_script_v2><![CDATA[function onClick(g_form) {
+        <client>false</client>
+        <client_script_v2><![CDATA[(function onClick(g_form) {
+    current.state = 'rejected';
+    var comments = false;
 
-}]]></client_script_v2>
+    var lastComment = current.comments.getJournalEntry(1);
+    if (!global.JSUtil.nil(lastComment)) {
+        var index = lastComment.indexOf(gs.getUserDisplayName());
+        if (index > -1 && index <= 22)
+            comments = true;
+    }
+
+    if (!global.JSUtil.nil(current.comments) || comments) {
+        current.update();
+        new global.ApprovalUserFeedback().rejected(current);
+    } else {
+        gs.addErrorMessage(gs.getMessage("Comments are required when rejecting an approval"));
+        current.state = 'requested';
+        current.setAbortAction(true);
+    }
+})(g_form);
+
+]]></client_script_v2>
         <comments/>
         <condition>current.state == 'requested'&amp;&amp; (gs.hasRole('x_1777185_home_s_0.service team'))</condition>
         <form_action>true</form_action>
         <form_button>true</form_button>
-        <form_button_v2>false</form_button_v2>
+        <form_button_v2>true</form_button_v2>
         <form_context_menu>false</form_context_menu>
         <form_link>false</form_link>
         <form_menu_button_v2>false</form_menu_button_v2>
-        <form_style/>
-        <format_for_configurable_workspace>false</format_for_configurable_workspace>
+        <form_style>destructive</form_style>
+        <format_for_configurable_workspace>true</format_for_configurable_workspace>
         <hint/>
         <isolate_script>true</isolate_script>
         <list_action>false</list_action>
@@ -25,22 +44,35 @@
         <list_context_menu>false</list_context_menu>
         <list_link>false</list_link>
         <list_save_with_form_button>false</list_save_with_form_button>
-        <list_style/>
+        <list_style>destructive</list_style>
         <messages/>
         <name>Reject</name>
         <onclick>onClickReject()</onclick>
         <order>100</order>
-        <script><![CDATA[function onClickReject() {
-    var comments = g_form.getValue('comments');
+        <script><![CDATA[(function(){
    
-    if (!comments.trim()) {
-        g_form.showFieldMsg('comments', 'Comments are mandatory when rejecting', 'error');
-        return false;
+    current.state = 'rejected';
+    var comments = false;
+
+    var lastComment = current.comments.getJournalEntry(1);
+    if (!global.JSUtil.nil(lastComment)) {
+        var index = lastComment.indexOf(gs.getUserDisplayName());
+        if (index > -1 && index <= 22)
+            comments = true;
     }
- 
-    g_form.setValue('state', 'rejected');
-    g_form.submit();
-}]]></script>
+
+    if (!global.JSUtil.nil(current.comments) || comments) {
+        current.update();
+        new global.ApprovalUserFeedback().rejected(current);
+    } else {
+        gs.addErrorMessage(gs.getMessage("Comments are required when rejecting an approval"));
+        current.state = 'requested';
+    }
+
+
+
+
+})();]]></script>
         <show_insert>true</show_insert>
         <show_multiple_update>false</show_multiple_update>
         <show_query>false</show_query>
@@ -51,7 +83,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f90ddcacc33a6a50ca67153ed4013116</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name>Reject</sys_name>
         <sys_overrides/>
         <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
@@ -59,7 +91,7 @@
         <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
         <sys_update_name>sys_ui_action_f90ddcacc33a6a50ca67153ed4013116</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-14 05:29:52</sys_updated_on>
+        <sys_updated_on>2025-07-15 15:57:47</sys_updated_on>
         <table>sysapproval_approver</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

@@ -2,35 +2,8 @@
     <sys_ui_action action="INSERT_OR_UPDATE">
         <action_name/>
         <active>true</active>
-        <client>true</client>
+        <client>false</client>
         <client_script_v2><![CDATA[function onClick(g_form) {
-
-}]]></client_script_v2>
-        <comments/>
-        <condition>current.current_status==2 </condition>
-        <form_action>true</form_action>
-        <form_button>true</form_button>
-        <form_button_v2>false</form_button_v2>
-        <form_context_menu>false</form_context_menu>
-        <form_link>false</form_link>
-        <form_menu_button_v2>false</form_menu_button_v2>
-        <form_style/>
-        <format_for_configurable_workspace>false</format_for_configurable_workspace>
-        <hint/>
-        <isolate_script>true</isolate_script>
-        <list_action>false</list_action>
-        <list_banner_button>false</list_banner_button>
-        <list_button>false</list_button>
-        <list_choice>false</list_choice>
-        <list_context_menu>false</list_context_menu>
-        <list_link>false</list_link>
-        <list_save_with_form_button>false</list_save_with_form_button>
-        <list_style/>
-        <messages/>
-        <name>Cancel</name>
-        <onclick>onCancel()</onclick>
-        <order>100</order>
-        <script><![CDATA[function onCancel(){
 	
 	g_form.setDisplay('reason_to_cancel', true);
 
@@ -43,6 +16,38 @@
  
 	g_form.setValue('current_status',6);
 	g_form.submit();
+}]]></client_script_v2>
+        <comments/>
+        <condition>current.current_status==2 </condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>true</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>true</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>true</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>Cancel</name>
+        <onclick>onCancelClick()</onclick>
+        <order>100</order>
+        <script><![CDATA[if (current.reason_to_cancel.nil()) {
+    gs.addErrorMessage('Reason to cancel is mandatory while cancelling the request.');
+    current.setAbortAction(true);
+}
+else{
+current.current_status=6;
+current.update();
 }]]></script>
         <show_insert>true</show_insert>
         <show_multiple_update>false</show_multiple_update>
@@ -54,7 +59,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>e49a3d6bc3262650ca67153ed4013154</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>Cancel</sys_name>
         <sys_overrides/>
         <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
@@ -62,7 +67,7 @@
         <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
         <sys_update_name>sys_ui_action_e49a3d6bc3262650ca67153ed4013154</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-13 11:47:06</sys_updated_on>
+        <sys_updated_on>2025-07-16 13:04:16</sys_updated_on>
         <table>x_1777185_home_s_0_complaint_details</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_form_action_layout_item">
+    <sys_ux_form_action_layout_item action="INSERT_OR_UPDATE">
+        <action display_value="Cancel">39ee0419c37e6e50ca67153ed401316c</action>
+        <active>true</active>
+        <color>secondary</color>
+        <description/>
+        <icon/>
+        <item_type>action</item_type>
+        <label>Cancel</label>
+        <layout_group/>
+        <name>Cancel</name>
+        <order>100</order>
+        <overflow>false</overflow>
+        <sys_class_name>sys_ux_form_action_layout_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-16 12:00:10</sys_created_on>
+        <sys_id>71ee0419c37e6e50ca67153ed4013171</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Cancel</sys_name>
+        <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
+        <sys_update_name>sys_ux_form_action_layout_item_71ee0419c37e6e50ca67153ed4013171</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-16 12:00:10</sys_updated_on>
+        <table>x_1777185_home_s_0_complaint_details</table>
+    </sys_ux_form_action_layout_item>
+</record_update>

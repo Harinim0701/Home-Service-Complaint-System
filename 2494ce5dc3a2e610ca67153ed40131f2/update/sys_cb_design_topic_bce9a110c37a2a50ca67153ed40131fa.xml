@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_design_topic">
     <sys_cb_design_topic action="INSERT_OR_UPDATE">
         <compiled_topic display_value="Home Service Complaint System Bot">e4e9a110c37a2a50ca67153ed40131c1</compiled_topic>
-        <design_definition>{"type":"FlowTopic","triggers":[{"type":"Trigger","name":"f233e7dea8ad42dbaafa05eaf15f1a21","triggerType":"request","applicability":{"type":"Applicability","mode":"script","value":"true"},"id":"f233e7dea8ad42dbaafa05eaf15f1a21"}],"goals":[{"name":"primary","trigger_id":"f233e7dea8ad42dbaafa05eaf15f1a21","nodes":[{"type":"StartGoal","goal_id":"primary","greeting_msg":{"type":"String","mode":"string","value":""},"id":"9d7792ebfb8741698adcfe85f0c4eb7f","name":"Start","expert_mode":false},{"type":"TerminateGoal","goal_id":"primary","confirmation_msg":{"type":"String","mode":"string","value":""},"id":"f26f8bfa9a684350a7544fdd0f3810ca","name":"End","expert_mode":false},{"type":"TextOutputPrompt","value":[{"type":"String","mode":"string","value":"gs.getMessageLang(\"Hi {0} ,\", vaContext.getRequesterLang(), [vaInputs.user.name.getDisplayValue()])"}],"request_feedback":true,"id":"b6c2d685396647039715c75e0e42d30a","name":"Welcome Message","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"secure":false},{"type":"ChoiceInputPrompt","expression_mode":"simple","metadataScript":"","cardName":"","cardFields":[],"id":"634d2a5abdb44e27a9d883cacaf7bcb7","name":"Choose action","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"variable_id":"0f65aee7f68846eda5b797646bbc3fab","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"What could you like to do ?\", vaContext.getRequesterLang())"},"request_feedback":false,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"description":""},{"type":"Decision","name":"Decision","branches":[{"type":"Branch","label":"Track the status","expression":{"type":"Applicability","mode":"query","value":"choose_action=Track the current status "},"id":"e6eb58cb561f402fa989ba985aa16fe7","name":"Track the status","expert_mode":false},{"type":"Branch","label":"Cancel the request","expression":{"type":"Applicability","mode":"query","value":"choose_action=Cancel the complaint"},"id":"db40d64643da476f9b48c9dfd1d421ae","name":"Cancel the request","expert_mode":false}],"id":"78540f2f73ec41189b1599c2432bfbb5","goal_id":"primary","expert_mode":false},{"type":"TerminateGoal","goal_id":"primary","id":"e93fa40f65e74b4b9d4c75359f6a725e","name":"ImplicitEnd__f56dcc8a343347b5bcf918d34555d3ce","expert_mode":false},{"type":"CRUDAction","mode":"read","read_mode":"variable","query":"number={{vaInputs.get_reference_number}}","variable_id":"abd20217730f49f2b918c8976b6294eb","id":"24668afaf4ee4d7b8a64fa20eb6e8d29","name":"Get the requested record","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"condition":{"type":"Condition","mode":"glide_query","value":"number={{vaInputs.get_reference_number}}"}},{"type":"RecordOutputPrompt","mode":"variable","table":"x_1777185_home_s_0_complaint_details","variable_id":"abd20217730f49f2b918c8976b6294eb","fields":["current_status","customer_name","service_name","case_priority"],"request_feedback":true,"id":"45999c7c6c1c47da8c41b39caae048f3","name":"Show the record","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"condition":{"type":"Condition","mode":"glide_query","value":""}},{"type":"InputPrompt","variable_id":"28be0c4e2dd14f2fbd54b7701419392b","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"Do you want to end the conversation?\", vaContext.getRequesterLang())"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"request_feedback":false,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"id":"2f7a2d3fc7de4b63a9d2272cf0b174e9","name":"End Card","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"description":""},{"type":"Decision","name":"Decision","branches":[{"type":"Branch","label":"true","expression":{"type":"Applicability","mode":"query","value":"end_card=true"},"id":"673739a661794fb5a897722b98203b9c","name":"true","expert_mode":false},{"type":"Branch","label":"false","expression":{"type":"Applicability","mode":"query","value":"end_card=false"},"id":"4e3c92153cbb4379acd3ae831388c9e5","name":"false","expert_mode":false}],"id":"739a4b0888194d139eba968b58611d65","goal_id":"primary","expert_mode":false},{"type":"InputPrompt","variable_id":"5dfdef72aca349c4b95ed43e8c993725","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"Please enter your  Reference Number.\", vaContext.getRequesterLang())"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"request_feedback":true,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"id":"762866d7a92045aeaa15d0db0b3131ef","name":"Get Reference Number","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"formatType":"Text","validationScript":"","description":""}],"edges":[{"type":"Edge","source_node_id":"78540f2f73ec41189b1599c2432bfbb5","target_node_id":"24668afaf4ee4d7b8a64fa20eb6e8d29","branch_id":"e6eb58cb561f402fa989ba985aa16fe7","id":"2849779aa6924a63b8d833c898f89593","name":"e6eb58cb561f402fa989ba985aa16fe7"},{"type":"Edge","source_node_id":"739a4b0888194d139eba968b58611d65","target_node_id":"f26f8bfa9a684350a7544fdd0f3810ca","branch_id":"673739a661794fb5a897722b98203b9c","id":"6e6cd62739534f82833f592b84beb673","name":"673739a661794fb5a897722b98203b9c"},{"type":"Edge","source_node_id":"739a4b0888194d139eba968b58611d65","target_node_id":"634d2a5abdb44e27a9d883cacaf7bcb7","branch_id":"4e3c92153cbb4379acd3ae831388c9e5","id":"9fcd901abe2f40049ae9f2b3e3d32af2","name":"4e3c92153cbb4379acd3ae831388c9e5"},{"type":"Edge","source_node_id":"9d7792ebfb8741698adcfe85f0c4eb7f","target_node_id":"b6c2d685396647039715c75e0e42d30a","id":"97951c16d21c4251b22c86a6ebb0ea21"},{"type":"Edge","source_node_id":"b6c2d685396647039715c75e0e42d30a","target_node_id":"634d2a5abdb44e27a9d883cacaf7bcb7","id":"8fee18bdbeb547b188a49c3e4fa0c233"},{"type":"Edge","source_node_id":"78540f2f73ec41189b1599c2432bfbb5","target_node_id":"e93fa40f65e74b4b9d4c75359f6a725e","branch_id":"db40d64643da476f9b48c9dfd1d421ae","id":"e661bc487d0340aa8bb896e9ed6d22c8","name":"db40d64643da476f9b48c9dfd1d421ae"},{"type":"Edge","source_node_id":"24668afaf4ee4d7b8a64fa20eb6e8d29","target_node_id":"45999c7c6c1c47da8c41b39caae048f3","id":"d09ba90ae1b34f959144904f00153a5e"},{"type":"Edge","source_node_id":"45999c7c6c1c47da8c41b39caae048f3","target_node_id":"2f7a2d3fc7de4b63a9d2272cf0b174e9","id":"510ef3aed05440ac8247886022bf829f"},{"type":"Edge","source_node_id":"2f7a2d3fc7de4b63a9d2272cf0b174e9","target_node_id":"739a4b0888194d139eba968b58611d65","id":"9ab1c247314b4c0c9c0b226bdc4ca060"},{"type":"Edge","source_node_id":"634d2a5abdb44e27a9d883cacaf7bcb7","target_node_id":"762866d7a92045aeaa15d0db0b3131ef","id":"5f843c6bc38a4f95a78a97322ceae5ea"},{"type":"Edge","source_node_id":"762866d7a92045aeaa15d0db0b3131ef","target_node_id":"78540f2f73ec41189b1599c2432bfbb5","id":"a4bbdce626334f37b8c54b5f306d65e8"}],"id":"primary"}],"script_variables":[],"glide_variables":[{"type":"Reference","table":"sys_user","auto_select":false,"id":"current-user","name":"user","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false},{"type":"Choice","choices":[{"name":"Cancel the complaint","element":"Cancel the complaint"},{"name":"Track the current status ","element":"Track the current status "}],"id":"0f65aee7f68846eda5b797646bbc3fab","name":"choose_action","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false,"label":"Choose Action"},{"type":"String","name":"get_reference_number","list":false,"id":"5dfdef72aca349c4b95ed43e8c993725","formatType":"Text","validationScript":"","secure":false,"sensitive":false,"aiInput":false},{"type":"Reference","table":"x_1777185_home_s_0_complaint_details","auto_select":false,"id":"abd20217730f49f2b918c8976b6294eb","name":"get_the_requested_record","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false},{"type":"True/False","id":"28be0c4e2dd14f2fbd54b7701419392b","name":"end_card","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false}],"applicability":{"type":"Applicability","mode":"script","value":"true"},"roles":[],"scope":"2494ce5dc3a2e610ca67153ed40131f2","domain":"global","topic_type":"STANDARD","channels":[],"dialog_acts_enabled":false,"id":"4892ed14c33a2a50ca67153ed40131d3","name":"Home Service Complaint System Bot","key_phrases":["Home Service Complaint System Bot"],"nlu_provider":"","nlu_model":"","nlu_model_label":"","nlu_intent":"","nlu_intent_label":"","flexible_conversation_switching":false,"autopilot_topic":false,"design_categories":[],"triggerable_by_notification":false,"description":"","model_type":"nlu_keyword","foundational":false,"modify_confirmation_enabled":false,"context_profiles":[],"title":"Home Service Complaint System Bot","library":false,"csTopicId":"e4e9a110c37a2a50ca67153ed40131c1","readOnly":false,"nluMapping":"[]"}</design_definition>
+        <design_definition>{"type":"FlowTopic","triggers":[{"type":"Trigger","name":"982fa64843ec497797c5ca05f2dc8901","triggerType":"request","applicability":{"type":"Applicability","mode":"script","value":"true"},"id":"982fa64843ec497797c5ca05f2dc8901"}],"goals":[{"name":"primary","trigger_id":"982fa64843ec497797c5ca05f2dc8901","nodes":[{"type":"StartGoal","goal_id":"primary","greeting_msg":{"type":"String","mode":"string","value":""},"id":"9d7792ebfb8741698adcfe85f0c4eb7f","name":"Start","expert_mode":false},{"type":"TerminateGoal","goal_id":"primary","confirmation_msg":{"type":"String","mode":"string","value":""},"id":"f26f8bfa9a684350a7544fdd0f3810ca","name":"End","expert_mode":false},{"type":"TextOutputPrompt","value":[{"type":"String","mode":"string","value":"gs.getMessageLang(\"Hi {0} ,\", vaContext.getRequesterLang(), [vaInputs.user.name.getDisplayValue()])"}],"request_feedback":true,"id":"b6c2d685396647039715c75e0e42d30a","name":"Welcome Message","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"secure":false},{"type":"ChoiceInputPrompt","expression_mode":"simple","metadataScript":"","cardName":"","cardFields":[],"id":"634d2a5abdb44e27a9d883cacaf7bcb7","name":"Choose action","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"variable_id":"0f65aee7f68846eda5b797646bbc3fab","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"What could you like to do ?\", vaContext.getRequesterLang())"},"request_feedback":false,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"description":""},{"type":"Decision","name":"Decision","branches":[{"type":"Branch","label":"Track the status","expression":{"type":"Applicability","mode":"query","value":"choose_action=Track the current status "},"id":"c26e8904167048a7a3f284d133e6b965","name":"Track the status","expert_mode":false},{"type":"Branch","label":"Cancel the request","expression":{"type":"Applicability","mode":"query","value":"choose_action=Cancel the complaint"},"id":"62088b8ccfa84403a32f74eaa9de44b5","name":"Cancel the request","expert_mode":false}],"id":"78540f2f73ec41189b1599c2432bfbb5","goal_id":"primary","expert_mode":false},{"type":"CRUDAction","mode":"read","read_mode":"variable","query":"number={{vaInputs.get_reference_number}}","variable_id":"abd20217730f49f2b918c8976b6294eb","id":"24668afaf4ee4d7b8a64fa20eb6e8d29","name":"Get the requested record","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"condition":{"type":"Condition","mode":"glide_query","value":"number={{vaInputs.get_reference_number}}"}},{"type":"RecordOutputPrompt","mode":"variable","table":"x_1777185_home_s_0_complaint_details","variable_id":"abd20217730f49f2b918c8976b6294eb","fields":["current_status","customer_name","service_name","case_priority"],"request_feedback":true,"id":"45999c7c6c1c47da8c41b39caae048f3","name":"Show the record","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"condition":{"type":"Condition","mode":"glide_query","value":""}},{"type":"InputPrompt","variable_id":"28be0c4e2dd14f2fbd54b7701419392b","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"Do you want to end the conversation?\", vaContext.getRequesterLang())"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"request_feedback":false,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"id":"2f7a2d3fc7de4b63a9d2272cf0b174e9","name":"End Card","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"description":""},{"type":"Decision","name":"Decision","branches":[{"type":"Branch","label":"true","expression":{"type":"Applicability","mode":"query","value":"end_card=true"},"id":"999ef4168d344d39a98e2452d056d7d1","name":"true","expert_mode":false},{"type":"Branch","label":"false","expression":{"type":"Applicability","mode":"query","value":"end_card=false"},"id":"a42370fa059f43a9bd280e9de7fae7a8","name":"false","expert_mode":false}],"id":"739a4b0888194d139eba968b58611d65","goal_id":"primary","expert_mode":false},{"type":"InputPrompt","variable_id":"5dfdef72aca349c4b95ed43e8c993725","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"Please enter your  Reference Number.\", vaContext.getRequesterLang())"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"request_feedback":true,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"id":"762866d7a92045aeaa15d0db0b3131ef","name":"Get Reference Number","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"formatType":"Text","validationScript":"","description":""},{"type":"CRUDAction","mode":"read","read_mode":"variable","query":"number={{vaInputs.get_reference_number}}^current_status=2","variable_id":"f6dc51adfaf3492b8e2d22c3e721b39b","id":"9ef80b62f2bb48b6b7ddc93d6b47f37c","name":"Get the requested record for cancel","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"condition":{"type":"Condition","mode":"glide_query","value":"number={{vaInputs.get_reference_number}}^current_status=2"}},{"type":"Decision","name":"Decision","branches":[{"type":"Branch","label":"Yes","expression":{"type":"Applicability","mode":"query","value":"get_the_requested_record_for_cancelISNOTEMPTY"},"id":"9fd59bd6bdf742c9b43b9768df784cc0","name":"Yes","expert_mode":false},{"type":"Branch","label":"No","expression":{"type":"Applicability","mode":"query","value":""},"id":"9653fe5922f7461f8f25be285f19f610","name":"No","expert_mode":false}],"id":"a4cec6102b294fbba5cb9437491258a4","goal_id":"primary","expert_mode":false},{"type":"CRUDAction","mode":"update","query":"current_status=6","variable_id":"f6dc51adfaf3492b8e2d22c3e721b39b","id":"b07eea1c938644a0b1fac9e823595700","name":"Update the record","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"attachments":[{"type":"String","mode":"string","value":""}]},{"type":"TextOutputPrompt","value":[{"type":"String","mode":"string","value":"gs.getMessageLang(\"The current status is not under review. So it cannot be cancelled.\", vaContext.getRequesterLang())"}],"request_feedback":true,"id":"449aec4f02164d00a1fee60baaa23e7e","name":"If no?","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"secure":false},{"type":"TextOutputPrompt","value":[{"type":"String","mode":"string","value":"gs.getMessageLang(\"Your complaint has been cancelled successfully.\", vaContext.getRequesterLang())"}],"request_feedback":true,"id":"d9cbf606b6ca44c69d5f7c3e42b5e119","name":"If yes?","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"secure":false}],"edges":[{"type":"Edge","source_node_id":"449aec4f02164d00a1fee60baaa23e7e","target_node_id":"f26f8bfa9a684350a7544fdd0f3810ca","id":"2168b5cd95dd42e6ae90bf565b3a85fc"},{"type":"Edge","source_node_id":"78540f2f73ec41189b1599c2432bfbb5","target_node_id":"24668afaf4ee4d7b8a64fa20eb6e8d29","branch_id":"c26e8904167048a7a3f284d133e6b965","id":"2849779aa6924a63b8d833c898f89593","name":"c26e8904167048a7a3f284d133e6b965"},{"type":"Edge","source_node_id":"739a4b0888194d139eba968b58611d65","target_node_id":"f26f8bfa9a684350a7544fdd0f3810ca","branch_id":"999ef4168d344d39a98e2452d056d7d1","id":"6e6cd62739534f82833f592b84beb673","name":"999ef4168d344d39a98e2452d056d7d1"},{"type":"Edge","source_node_id":"739a4b0888194d139eba968b58611d65","target_node_id":"634d2a5abdb44e27a9d883cacaf7bcb7","branch_id":"a42370fa059f43a9bd280e9de7fae7a8","id":"9fcd901abe2f40049ae9f2b3e3d32af2","name":"a42370fa059f43a9bd280e9de7fae7a8"},{"type":"Edge","source_node_id":"9d7792ebfb8741698adcfe85f0c4eb7f","target_node_id":"b6c2d685396647039715c75e0e42d30a","id":"97951c16d21c4251b22c86a6ebb0ea21"},{"type":"Edge","source_node_id":"b6c2d685396647039715c75e0e42d30a","target_node_id":"634d2a5abdb44e27a9d883cacaf7bcb7","id":"8fee18bdbeb547b188a49c3e4fa0c233"},{"type":"Edge","source_node_id":"24668afaf4ee4d7b8a64fa20eb6e8d29","target_node_id":"45999c7c6c1c47da8c41b39caae048f3","id":"d09ba90ae1b34f959144904f00153a5e"},{"type":"Edge","source_node_id":"45999c7c6c1c47da8c41b39caae048f3","target_node_id":"2f7a2d3fc7de4b63a9d2272cf0b174e9","id":"510ef3aed05440ac8247886022bf829f"},{"type":"Edge","source_node_id":"2f7a2d3fc7de4b63a9d2272cf0b174e9","target_node_id":"739a4b0888194d139eba968b58611d65","id":"9ab1c247314b4c0c9c0b226bdc4ca060"},{"type":"Edge","source_node_id":"634d2a5abdb44e27a9d883cacaf7bcb7","target_node_id":"762866d7a92045aeaa15d0db0b3131ef","id":"5f843c6bc38a4f95a78a97322ceae5ea"},{"type":"Edge","source_node_id":"762866d7a92045aeaa15d0db0b3131ef","target_node_id":"78540f2f73ec41189b1599c2432bfbb5","id":"07688cd051f3462db333eadf047c97df"},{"type":"Edge","source_node_id":"78540f2f73ec41189b1599c2432bfbb5","target_node_id":"9ef80b62f2bb48b6b7ddc93d6b47f37c","branch_id":"62088b8ccfa84403a32f74eaa9de44b5","id":"e661bc487d0340aa8bb896e9ed6d22c8","name":"62088b8ccfa84403a32f74eaa9de44b5"},{"type":"Edge","source_node_id":"9ef80b62f2bb48b6b7ddc93d6b47f37c","target_node_id":"a4cec6102b294fbba5cb9437491258a4","id":"a2d46d772b7f4c47b3c2e3d0657997cf"},{"type":"Edge","source_node_id":"a4cec6102b294fbba5cb9437491258a4","target_node_id":"b07eea1c938644a0b1fac9e823595700","branch_id":"9fd59bd6bdf742c9b43b9768df784cc0","id":"6d187702e8a04514a91d2a1465e1da31","name":"9fd59bd6bdf742c9b43b9768df784cc0"},{"type":"Edge","source_node_id":"a4cec6102b294fbba5cb9437491258a4","target_node_id":"449aec4f02164d00a1fee60baaa23e7e","branch_id":"9653fe5922f7461f8f25be285f19f610","id":"db959cd40199433698f023f15d424b12","name":"9653fe5922f7461f8f25be285f19f610"},{"type":"Edge","source_node_id":"b07eea1c938644a0b1fac9e823595700","target_node_id":"d9cbf606b6ca44c69d5f7c3e42b5e119","id":"e6343d6ec14648c9bbe7aecd2ba891e6"},{"type":"Edge","source_node_id":"d9cbf606b6ca44c69d5f7c3e42b5e119","target_node_id":"f26f8bfa9a684350a7544fdd0f3810ca","id":"c400ca22779a411d892a316ff02365fa"}],"id":"primary"}],"script_variables":[],"glide_variables":[{"type":"Reference","table":"sys_user","auto_select":false,"id":"current-user","name":"user","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false},{"type":"Choice","choices":[{"name":"Cancel the complaint","element":"Cancel the complaint"},{"name":"Track the current status ","element":"Track the current status "}],"id":"0f65aee7f68846eda5b797646bbc3fab","name":"choose_action","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false,"label":"Choose Action"},{"type":"String","name":"get_reference_number","list":false,"id":"5dfdef72aca349c4b95ed43e8c993725","formatType":"Text","validationScript":"","secure":false,"sensitive":false,"aiInput":false},{"type":"Reference","table":"x_1777185_home_s_0_complaint_details","auto_select":false,"id":"abd20217730f49f2b918c8976b6294eb","name":"get_the_requested_record","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false},{"type":"True/False","id":"28be0c4e2dd14f2fbd54b7701419392b","name":"end_card","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false},{"type":"Reference","table":"x_1777185_home_s_0_complaint_details","auto_select":false,"id":"f6dc51adfaf3492b8e2d22c3e721b39b","name":"get_the_requested_record_for_cancel","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false},{"type":"Reference","table":"","auto_select":false,"id":"302c2d60bd6d40c8aec313937a986eae","name":"update_the_record","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false}],"applicability":{"type":"Applicability","mode":"script","value":"true"},"roles":[],"scope":"2494ce5dc3a2e610ca67153ed40131f2","domain":"global","topic_type":"STANDARD","channels":[],"dialog_acts_enabled":false,"id":"4892ed14c33a2a50ca67153ed40131d3","name":"Home Service Complaint System Bot","key_phrases":["Home Service Complaint System Bot"],"nlu_provider":"","nlu_model":"","nlu_model_label":"","nlu_intent":"","nlu_intent_label":"","flexible_conversation_switching":false,"autopilot_topic":false,"design_categories":[],"triggerable_by_notification":false,"model_type":"nlu_keyword","foundational":false,"modify_confirmation_enabled":false,"context_profiles":[],"title":"Home Service Complaint System Bot","library":false,"csTopicId":"e4e9a110c37a2a50ca67153ed40131c1","readOnly":false,"nluMapping":"[]"}</design_definition>
         <design_topic_id>4892ed14c33a2a50ca67153ed40131d3</design_topic_id>
         <graph>{
   "graph_api_version": "1.0.74",
@@ -133,10 +133,6 @@
           "id": "78540f2f73ec41189b1599c2432bfbb5",
           "stepType": "Decision",
           "name": "Decision"
-        },
-        "e93fa40f65e74b4b9d4c75359f6a725e": {
-          "id": "e93fa40f65e74b4b9d4c75359f6a725e",
-          "stepType": "ImplicitEnd"
         },
         "24668afaf4ee4d7b8a64fa20eb6e8d29": {
           "id": "24668afaf4ee4d7b8a64fa20eb6e8d29",
@@ -282,9 +278,122 @@
             "script": ""
           },
           "requestFeedback": true
+        },
+        "9ef80b62f2bb48b6b7ddc93d6b47f37c": {
+          "id": "9ef80b62f2bb48b6b7ddc93d6b47f37c",
+          "stepType": "LookupRecord",
+          "name": "Get the requested record for cancel",
+          "condition": {
+            "mode": "glide_query",
+            "value": "number={{vaInputs.get_reference_number}}^current_status=2"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "variableId": "f6dc51adfaf3492b8e2d22c3e721b39b"
+        },
+        "a4cec6102b294fbba5cb9437491258a4": {
+          "id": "a4cec6102b294fbba5cb9437491258a4",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "b07eea1c938644a0b1fac9e823595700": {
+          "id": "b07eea1c938644a0b1fac9e823595700",
+          "stepType": "CrudAction",
+          "name": "Update the record",
+          "template": {
+            "query": {
+              "terms": [
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "current_status",
+                  "expression": "6",
+                  "id": "dafdc5125cb844948601262f56076f04"
+                }
+              ]
+            },
+            "queryString": "current_status=6"
+          },
+          "mode": "update",
+          "record": "f6dc51adfaf3492b8e2d22c3e721b39b",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "attachments": [
+            {
+              "value": "",
+              "mode": "simple"
+            }
+          ],
+          "variableId": "302c2d60bd6d40c8aec313937a986eae"
+        },
+        "449aec4f02164d00a1fee60baaa23e7e": {
+          "id": "449aec4f02164d00a1fee60baaa23e7e",
+          "stepType": "TextOutput",
+          "name": "If no?",
+          "secure": false,
+          "value": [
+            {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "The current status is not under review. So it cannot be cancelled."
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "_key": "0ce3eebf6fcd4f809d7571101bb6d171"
+            }
+          ],
+          "requestFeedback": true,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "d9cbf606b6ca44c69d5f7c3e42b5e119": {
+          "id": "d9cbf606b6ca44c69d5f7c3e42b5e119",
+          "stepType": "TextOutput",
+          "name": "If yes?",
+          "secure": false,
+          "value": [
+            {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Your complaint has been cancelled successfully."
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "_key": "46c7fdb6179144c692500bee97a26c2d"
+            }
+          ],
+          "requestFeedback": true,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
         }
       },
       "edges": [
+        {
+          "id": "2168b5cd95dd42e6ae90bf565b3a85fc",
+          "edgeType": "Edge",
+          "source": "449aec4f02164d00a1fee60baaa23e7e",
+          "target": "f26f8bfa9a684350a7544fdd0f3810ca",
+          "sourcePort": "",
+          "targetPort": ""
+        },
         {
           "id": "2849779aa6924a63b8d833c898f89593",
           "edgeType": "Branch",
@@ -341,19 +450,6 @@
           "targetPort": ""
         },
         {
-          "id": "e661bc487d0340aa8bb896e9ed6d22c8",
-          "edgeType": "Branch",
-          "source": "78540f2f73ec41189b1599c2432bfbb5",
-          "target": "e93fa40f65e74b4b9d4c75359f6a725e",
-          "sourcePort": "",
-          "targetPort": "",
-          "expression": {
-            "value": "vaInputs.choose_action=Cancel the complaint",
-            "mode": "query"
-          },
-          "label": "Cancel the request"
-        },
-        {
           "id": "d09ba90ae1b34f959144904f00153a5e",
           "edgeType": "Edge",
           "source": "24668afaf4ee4d7b8a64fa20eb6e8d29",
@@ -386,10 +482,73 @@
           "targetPort": ""
         },
         {
-          "id": "a4bbdce626334f37b8c54b5f306d65e8",
+          "id": "07688cd051f3462db333eadf047c97df",
           "edgeType": "Edge",
           "source": "762866d7a92045aeaa15d0db0b3131ef",
           "target": "78540f2f73ec41189b1599c2432bfbb5",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "e661bc487d0340aa8bb896e9ed6d22c8",
+          "edgeType": "Branch",
+          "source": "78540f2f73ec41189b1599c2432bfbb5",
+          "target": "9ef80b62f2bb48b6b7ddc93d6b47f37c",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.choose_action=Cancel the complaint",
+            "mode": "query"
+          },
+          "label": "Cancel the request"
+        },
+        {
+          "id": "a2d46d772b7f4c47b3c2e3d0657997cf",
+          "edgeType": "Edge",
+          "source": "9ef80b62f2bb48b6b7ddc93d6b47f37c",
+          "target": "a4cec6102b294fbba5cb9437491258a4",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "6d187702e8a04514a91d2a1465e1da31",
+          "edgeType": "Branch",
+          "source": "a4cec6102b294fbba5cb9437491258a4",
+          "target": "b07eea1c938644a0b1fac9e823595700",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.get_the_requested_record_for_cancelISNOTEMPTY",
+            "mode": "query"
+          },
+          "label": "Yes"
+        },
+        {
+          "id": "db959cd40199433698f023f15d424b12",
+          "edgeType": "Branch",
+          "source": "a4cec6102b294fbba5cb9437491258a4",
+          "target": "449aec4f02164d00a1fee60baaa23e7e",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "query",
+            "value": ""
+          },
+          "label": "No"
+        },
+        {
+          "id": "e6343d6ec14648c9bbe7aecd2ba891e6",
+          "edgeType": "Edge",
+          "source": "b07eea1c938644a0b1fac9e823595700",
+          "target": "d9cbf606b6ca44c69d5f7c3e42b5e119",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "c400ca22779a411d892a316ff02365fa",
+          "edgeType": "Edge",
+          "source": "d9cbf606b6ca44c69d5f7c3e42b5e119",
+          "target": "f26f8bfa9a684350a7544fdd0f3810ca",
           "sourcePort": "",
           "targetPort": ""
         }
@@ -458,6 +617,27 @@
       "category": "vaInputs",
       "nodeId": "2f7a2d3fc7de4b63a9d2272cf0b174e9",
       "isHidden": false
+    },
+    "f6dc51adfaf3492b8e2d22c3e721b39b": {
+      "id": "f6dc51adfaf3492b8e2d22c3e721b39b",
+      "name": "get_the_requested_record_for_cancel",
+      "label": "Get The Requested Record For Cancel",
+      "varType": "reference",
+      "table": "x_1777185_home_s_0_complaint_details",
+      "category": "vaInputs",
+      "nodeId": "9ef80b62f2bb48b6b7ddc93d6b47f37c",
+      "isHidden": false
+    },
+    "302c2d60bd6d40c8aec313937a986eae": {
+      "id": "302c2d60bd6d40c8aec313937a986eae",
+      "name": "update_the_record",
+      "label": "Update The Record",
+      "varType": "reference",
+      "table": "",
+      "inactive": true,
+      "category": "vaInputs",
+      "nodeId": "b07eea1c938644a0b1fac9e823595700",
+      "isHidden": false
     }
   }
 }</graph>
@@ -467,14 +647,14 @@
         <sys_created_on>2025-07-13 16:03:45</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>bce9a110c37a2a50ca67153ed40131fa</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>FlowTopic</sys_name>
         <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
         <sys_update_name>sys_cb_design_topic_bce9a110c37a2a50ca67153ed40131fa</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-13 16:14:15</sys_updated_on>
+        <sys_updated_on>2025-07-14 11:40:39</sys_updated_on>
         <type>FlowTopic</type>
     </sys_cb_design_topic>
 </record_update>

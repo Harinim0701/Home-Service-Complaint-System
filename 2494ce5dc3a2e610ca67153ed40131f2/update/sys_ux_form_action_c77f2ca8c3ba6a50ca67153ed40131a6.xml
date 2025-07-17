@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_form_action">
+    <sys_ux_form_action action="INSERT_OR_UPDATE">
+        <action_type>ui_action</action_type>
+        <active>true</active>
+        <declarative_action/>
+        <description/>
+        <name>Reject</name>
+        <specificity>10</specificity>
+        <sys_class_name>sys_ux_form_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-14 06:27:04</sys_created_on>
+        <sys_id>c77f2ca8c3ba6a50ca67153ed40131a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Reject</sys_name>
+        <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
+        <sys_update_name>sys_ux_form_action_c77f2ca8c3ba6a50ca67153ed40131a6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-14 06:27:04</sys_updated_on>
+        <table>sysapproval_approver</table>
+        <ui_action display_value="Reject">f90ddcacc33a6a50ca67153ed4013116</ui_action>
+    </sys_ux_form_action>
+    <sys_translated_text action="delete_multiple" query="documentkey=c77f2ca8c3ba6a50ca67153ed40131a6"/>
+</record_update>

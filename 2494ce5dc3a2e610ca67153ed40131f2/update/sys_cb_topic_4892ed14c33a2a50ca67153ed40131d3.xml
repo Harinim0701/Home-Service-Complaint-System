@@ -143,10 +143,6 @@
           "stepType": "Decision",
           "name": "Decision"
         },
-        "e93fa40f65e74b4b9d4c75359f6a725e": {
-          "id": "e93fa40f65e74b4b9d4c75359f6a725e",
-          "stepType": "ImplicitEnd"
-        },
         "24668afaf4ee4d7b8a64fa20eb6e8d29": {
           "id": "24668afaf4ee4d7b8a64fa20eb6e8d29",
           "stepType": "LookupRecord",
@@ -291,9 +287,122 @@
             "script": ""
           },
           "requestFeedback": true
+        },
+        "9ef80b62f2bb48b6b7ddc93d6b47f37c": {
+          "id": "9ef80b62f2bb48b6b7ddc93d6b47f37c",
+          "stepType": "LookupRecord",
+          "name": "Get the requested record for cancel",
+          "condition": {
+            "mode": "glide_query",
+            "value": "number={{vaInputs.get_reference_number}}^current_status=2"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "variableId": "f6dc51adfaf3492b8e2d22c3e721b39b"
+        },
+        "a4cec6102b294fbba5cb9437491258a4": {
+          "id": "a4cec6102b294fbba5cb9437491258a4",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "b07eea1c938644a0b1fac9e823595700": {
+          "id": "b07eea1c938644a0b1fac9e823595700",
+          "stepType": "CrudAction",
+          "name": "Update the record",
+          "template": {
+            "query": {
+              "terms": [
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "current_status",
+                  "expression": "6",
+                  "id": "dafdc5125cb844948601262f56076f04"
+                }
+              ]
+            },
+            "queryString": "current_status=6"
+          },
+          "mode": "update",
+          "record": "f6dc51adfaf3492b8e2d22c3e721b39b",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "attachments": [
+            {
+              "value": "",
+              "mode": "simple"
+            }
+          ],
+          "variableId": "302c2d60bd6d40c8aec313937a986eae"
+        },
+        "449aec4f02164d00a1fee60baaa23e7e": {
+          "id": "449aec4f02164d00a1fee60baaa23e7e",
+          "stepType": "TextOutput",
+          "name": "If no?",
+          "secure": false,
+          "value": [
+            {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "The current status is not under review. So it cannot be cancelled."
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "_key": "0ce3eebf6fcd4f809d7571101bb6d171"
+            }
+          ],
+          "requestFeedback": true,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "d9cbf606b6ca44c69d5f7c3e42b5e119": {
+          "id": "d9cbf606b6ca44c69d5f7c3e42b5e119",
+          "stepType": "TextOutput",
+          "name": "If yes?",
+          "secure": false,
+          "value": [
+            {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Your complaint has been cancelled successfully."
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "_key": "46c7fdb6179144c692500bee97a26c2d"
+            }
+          ],
+          "requestFeedback": true,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
         }
       },
       "edges": [
+        {
+          "id": "2168b5cd95dd42e6ae90bf565b3a85fc",
+          "edgeType": "Edge",
+          "source": "449aec4f02164d00a1fee60baaa23e7e",
+          "target": "f26f8bfa9a684350a7544fdd0f3810ca",
+          "sourcePort": "",
+          "targetPort": ""
+        },
         {
           "id": "2849779aa6924a63b8d833c898f89593",
           "edgeType": "Branch",
@@ -350,19 +459,6 @@
           "targetPort": ""
         },
         {
-          "id": "e661bc487d0340aa8bb896e9ed6d22c8",
-          "edgeType": "Branch",
-          "source": "78540f2f73ec41189b1599c2432bfbb5",
-          "target": "e93fa40f65e74b4b9d4c75359f6a725e",
-          "sourcePort": "",
-          "targetPort": "",
-          "expression": {
-            "value": "vaInputs.choose_action=Cancel the complaint",
-            "mode": "query"
-          },
-          "label": "Cancel the request"
-        },
-        {
           "id": "d09ba90ae1b34f959144904f00153a5e",
           "edgeType": "Edge",
           "source": "24668afaf4ee4d7b8a64fa20eb6e8d29",
@@ -395,10 +491,73 @@
           "targetPort": ""
         },
         {
-          "id": "a4bbdce626334f37b8c54b5f306d65e8",
+          "id": "07688cd051f3462db333eadf047c97df",
           "edgeType": "Edge",
           "source": "762866d7a92045aeaa15d0db0b3131ef",
           "target": "78540f2f73ec41189b1599c2432bfbb5",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "e661bc487d0340aa8bb896e9ed6d22c8",
+          "edgeType": "Branch",
+          "source": "78540f2f73ec41189b1599c2432bfbb5",
+          "target": "9ef80b62f2bb48b6b7ddc93d6b47f37c",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.choose_action=Cancel the complaint",
+            "mode": "query"
+          },
+          "label": "Cancel the request"
+        },
+        {
+          "id": "a2d46d772b7f4c47b3c2e3d0657997cf",
+          "edgeType": "Edge",
+          "source": "9ef80b62f2bb48b6b7ddc93d6b47f37c",
+          "target": "a4cec6102b294fbba5cb9437491258a4",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "6d187702e8a04514a91d2a1465e1da31",
+          "edgeType": "Branch",
+          "source": "a4cec6102b294fbba5cb9437491258a4",
+          "target": "b07eea1c938644a0b1fac9e823595700",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.get_the_requested_record_for_cancelISNOTEMPTY",
+            "mode": "query"
+          },
+          "label": "Yes"
+        },
+        {
+          "id": "db959cd40199433698f023f15d424b12",
+          "edgeType": "Branch",
+          "source": "a4cec6102b294fbba5cb9437491258a4",
+          "target": "449aec4f02164d00a1fee60baaa23e7e",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "query",
+            "value": ""
+          },
+          "label": "No"
+        },
+        {
+          "id": "e6343d6ec14648c9bbe7aecd2ba891e6",
+          "edgeType": "Edge",
+          "source": "b07eea1c938644a0b1fac9e823595700",
+          "target": "d9cbf606b6ca44c69d5f7c3e42b5e119",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "c400ca22779a411d892a316ff02365fa",
+          "edgeType": "Edge",
+          "source": "d9cbf606b6ca44c69d5f7c3e42b5e119",
+          "target": "f26f8bfa9a684350a7544fdd0f3810ca",
           "sourcePort": "",
           "targetPort": ""
         }
@@ -467,6 +626,27 @@
       "category": "vaInputs",
       "nodeId": "2f7a2d3fc7de4b63a9d2272cf0b174e9",
       "isHidden": false
+    },
+    "f6dc51adfaf3492b8e2d22c3e721b39b": {
+      "id": "f6dc51adfaf3492b8e2d22c3e721b39b",
+      "name": "get_the_requested_record_for_cancel",
+      "label": "Get The Requested Record For Cancel",
+      "varType": "reference",
+      "table": "x_1777185_home_s_0_complaint_details",
+      "category": "vaInputs",
+      "nodeId": "9ef80b62f2bb48b6b7ddc93d6b47f37c",
+      "isHidden": false
+    },
+    "302c2d60bd6d40c8aec313937a986eae": {
+      "id": "302c2d60bd6d40c8aec313937a986eae",
+      "name": "update_the_record",
+      "label": "Update The Record",
+      "varType": "reference",
+      "table": "",
+      "inactive": true,
+      "category": "vaInputs",
+      "nodeId": "b07eea1c938644a0b1fac9e823595700",
+      "isHidden": false
     }
   }
 }</graph>
@@ -491,14 +671,14 @@
         <sys_created_on>2025-07-13 15:31:46</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>4892ed14c33a2a50ca67153ed40131d3</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>Home Service Complaint System Bot</sys_name>
         <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
         <sys_update_name>sys_cb_topic_4892ed14c33a2a50ca67153ed40131d3</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-13 16:14:03</sys_updated_on>
+        <sys_updated_on>2025-07-14 11:40:27</sys_updated_on>
         <title>Home Service Complaint System Bot</title>
         <triggerable_by_notification>false</triggerable_by_notification>
         <type>STANDARD</type>

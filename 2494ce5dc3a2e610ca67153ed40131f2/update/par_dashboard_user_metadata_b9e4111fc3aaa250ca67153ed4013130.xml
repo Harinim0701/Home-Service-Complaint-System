@@ -6,7 +6,7 @@
         <created_by_user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</created_by_user>
         <created_on>2025-07-10 11:58:09</created_on>
         <dashboard display_value="Home Services Complaint System">f5e4111fc3aaa250ca67153ed4013110</dashboard>
-        <edit_locked>{"sysId":"6816f79cc0a8016401c5a33be04be441","name":"System Administrator","avatar":"a5d3c898c3222010ae17dd981840dd8b.iix?t=small","lockedOn":"1752337937379"}</edit_locked>
+        <edit_locked>{"sysId":"6816f79cc0a8016401c5a33be04be441","name":"System Administrator","avatar":"a5d3c898c3222010ae17dd981840dd8b.iix?t=small","lockedOn":"1752754295525"}</edit_locked>
         <enable_data_cache>false</enable_data_cache>
         <include_custom_insights>true</include_custom_insights>
         <include_key_contributors>true</include_key_contributors>
@@ -19,10 +19,10 @@
         <include_thresholds>true</include_thresholds>
         <include_trends>true</include_trends>
         <include_widget_notification>true</include_widget_notification>
-        <last_updated_on>2025-07-12 16:47:35</last_updated_on>
+        <last_updated_on>2025-07-16 13:53:18</last_updated_on>
         <po_project_id_list>[]</po_project_id_list>
         <refresh_information>false</refresh_information>
-        <refresh_interval/>
+        <refresh_interval>-1</refresh_interval>
         <requested_by_user/>
         <schedule_repetition>false</schedule_repetition>
         <show_insights_panel>true</show_insights_panel>
@@ -32,7 +32,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>b9e4111fc3aaa250ca67153ed4013130</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
@@ -40,7 +40,7 @@
         <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
         <sys_update_name>par_dashboard_user_metadata_b9e4111fc3aaa250ca67153ed4013130</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-12 16:47:35</sys_updated_on>
+        <sys_updated_on>2025-07-17 12:11:35</sys_updated_on>
         <updated_by_user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</updated_by_user>
         <use_custom_tab_colors>false</use_custom_tab_colors>
     </par_dashboard_user_metadata>

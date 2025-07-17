@@ -6,8 +6,8 @@
         <bootstrap_alt>false</bootstrap_alt>
         <class_name>padding-top-lg</class_name>
         <container_class_name/>
-        <name>Home service home page - Container 6</name>
-        <order>6</order>
+        <name>Home service home page - Container 4</name>
+        <order>4</order>
         <semantic_tag/>
         <sp_page display_value="home_service_home_page">9f6ec25fc3eea250ca67153ed401318c</sp_page>
         <subheader>false</subheader>
@@ -15,14 +15,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-07-10 16:09:29</sys_created_on>
         <sys_id>5f6e0e9fc3eea250ca67153ed4013161</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_name>Home service home page - Container 6</sys_name>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Home service home page - Container 4</sys_name>
         <sys_package display_value="Home Services Complaint System" source="x_1777185_home_s_0">2494ce5dc3a2e610ca67153ed40131f2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Home Services Complaint System">2494ce5dc3a2e610ca67153ed40131f2</sys_scope>
         <sys_update_name>sp_container_5f6e0e9fc3eea250ca67153ed4013161</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-11 05:30:14</sys_updated_on>
+        <sys_updated_on>2025-07-16 07:34:08</sys_updated_on>
         <title/>
         <width>container</width>
     </sp_container>
